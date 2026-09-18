@@ -139,4 +139,36 @@ function isTypingControl(element) {
 START
 =========================================================
 */
+document.addEventListener(
+    "touchstart",
+    e => {
+        console.log(
+            "TOUCHSTART:",
+            e.target
+        );
+    },
+    true
+);
+
+document.addEventListener(
+    "pointerdown",
+    e => {
+        console.log(
+            "POINTERDOWN:",
+            e.target
+        );
+    },
+    true
+);
+
+document.addEventListener(
+    "click",
+    e => {
+        console.log(
+            "CLICK:",
+            e.target
+        );
+    },
+    true
+);
 initApp();

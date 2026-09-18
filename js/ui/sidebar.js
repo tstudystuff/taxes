@@ -386,13 +386,22 @@ function initSidebarClickHandler() {
     CLICK HANDLER
     =========================================================
     */
-
     sideBarList.addEventListener(
         "click",
         (e) => {
 
+            console.log(
+                "SIDEBAR CLICK:",
+                e.target
+            );
+
             const link =
                 e.target.closest("a");
+
+            console.log(
+                "FOUND LINK:",
+                link
+            );
 
             if (!link) {
                 return;
@@ -403,17 +412,21 @@ function initSidebarClickHandler() {
             const pageId =
                 link.dataset.pageId;
 
-            /*
-            IMPORTANT:
-            Search both top-level pages
-            and nested children.
-            */
+            console.log(
+                "PAGE ID:",
+                pageId
+            );
 
             const page =
                 findPageById(
                     pages,
                     pageId
                 );
+
+            console.log(
+                "FOUND PAGE:",
+                page
+            );
 
             if (!page) {
 
@@ -428,9 +441,52 @@ function initSidebarClickHandler() {
             loadPage(page);
 
             refreshSteps();
-
         }
     );
+    // sideBarList.addEventListener(
+    //     "click",
+    //     (e) => {
+
+    //         const link =
+    //             e.target.closest("a");
+
+    //         if (!link) {
+    //             return;
+    //         }
+
+    //         e.preventDefault();
+
+    //         const pageId =
+    //             link.dataset.pageId;
+
+    //         /*
+    //         IMPORTANT:
+    //         Search both top-level pages
+    //         and nested children.
+    //         */
+
+    //         const page =
+    //             findPageById(
+    //                 pages,
+    //                 pageId
+    //             );
+
+    //         if (!page) {
+
+    //             console.warn(
+    //                 "Could not find sidebar page:",
+    //                 pageId
+    //             );
+
+    //             return;
+    //         }
+
+    //         loadPage(page);
+
+    //         refreshSteps();
+
+    //     }
+    // );
 }
 
 
