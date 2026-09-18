@@ -25,6 +25,7 @@ html {
 
 body {
     background: #111;
+
     color: #ddd;
     font-family:
         -apple-system,
@@ -197,7 +198,7 @@ body {
    SECONDARY NAV
    --------------------------------------------------------- */
 
-body > .page-wrapper > nav {
+body>.page-wrapper>nav {
     width: 100%;
 
     padding: 8px 18px;
@@ -207,7 +208,7 @@ body > .page-wrapper > nav {
     border-bottom: 1px solid #292929;
 }
 
-body > .page-wrapper > nav h2 {
+body>.page-wrapper>nav h2 {
     margin: 0;
 
     font-size: 0.9rem;
@@ -314,8 +315,14 @@ body > .page-wrapper > nav h2 {
     }
 
     .side-bar {
-        width: 215px;
-        min-width: 215px;
+        /* width: 215px; */
+        max-width: 30vw;
+    }
+
+    #sideBarList a {
+        font-size: 80% !important;
+        padding: 0 !important;
+        margin-bottom: 10%;
     }
 
     .main-landing-page {
