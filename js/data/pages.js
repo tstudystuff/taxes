@@ -4,7 +4,7 @@ export const defaultPages = [
     {
         id: "page-0",
         title: "return 1040",
-        file: "../forms-taxes-html/form-1040/form_1040_2025_html.html",
+        file: "../forms-taxes-html/form-1040/form_1040_2025.html",
 
         children: [
             {
