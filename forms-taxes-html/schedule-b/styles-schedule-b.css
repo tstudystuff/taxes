@@ -1,0 +1,786 @@
+/* styles-schedule-b.css
+   Schedule B (Form 1040), 2025
+*/
+
+.scheduleb-page {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 24px;
+
+    background: #fff;
+    color: #111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.12;
+
+    overflow-x: hidden;
+}
+
+
+.scheduleb-page *,
+.scheduleb-page *::before,
+.scheduleb-page *::after {
+    box-sizing: border-box;
+}
+
+
+.scheduleb-page input {
+    max-width: 100%;
+
+    font: inherit;
+    color: #111;
+
+    background: #fff;
+
+    border-radius: 0;
+}
+
+
+.scheduleb-page input[type="text"],
+.scheduleb-page input[type="number"] {
+    min-width: 0;
+    padding: 2px 4px;
+}
+
+
+.scheduleb-page input[type="radio"] {
+    margin: 0;
+}
+
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.scheduleb-header {
+    display: grid;
+
+    grid-template-columns:
+        125px minmax(0, 1fr) 120px;
+
+    min-height: 72px;
+
+    border-bottom: 1.5px solid #111;
+}
+
+
+.scheduleb-formno {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 4px 7px 3px 0;
+
+    border-right: 1.5px solid #111;
+}
+
+
+.scheduleb-formno>strong {
+    font-size: 15px;
+    line-height: 1;
+}
+
+
+.scheduleb-formno>span {
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+.scheduleb-agency {
+    margin-top: auto;
+
+    font-size: 8px;
+    line-height: 1.15;
+}
+
+
+.scheduleb-title {
+    min-width: 0;
+
+    padding: 7px 10px 3px;
+
+    text-align: center;
+}
+
+
+.scheduleb-title>strong {
+    display: block;
+
+    font-size: 18px;
+    line-height: 1.05;
+}
+
+
+.scheduleb-instructions-head {
+    margin-top: 7px;
+
+    font-size: 10px;
+    line-height: 1.18;
+}
+
+
+.scheduleb-omb {
+    padding: 3px 4px;
+
+    border-left: 1.5px solid #111;
+
+    text-align: center;
+
+    font-size: 8px;
+}
+
+
+.scheduleb-year {
+    margin: 3px 0 1px;
+
+    font-size: 26px;
+    line-height: 1;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* =========================================================
+   TAXPAYER ROW
+   ========================================================= */
+
+.scheduleb-taxpayer-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 150px;
+
+    border-bottom: 1px solid #111;
+}
+
+
+.scheduleb-taxpayer-row>div {
+    min-width: 0;
+    min-height: 31px;
+
+    padding: 3px 5px;
+}
+
+
+.scheduleb-taxpayer-row>div+div {
+    border-left: 1px solid #111;
+}
+
+
+.scheduleb-taxpayer-row label {
+    display: block;
+
+    margin-bottom: 1px;
+
+    font-size: 8px;
+    font-weight: bold;
+}
+
+
+.scheduleb-taxpayer-row input {
+    width: 100%;
+    height: 17px;
+
+    border: 0;
+    border-bottom: 1px dotted #777;
+}
+
+
+
+/* =========================================================
+   PART LAYOUT
+   ========================================================= */
+
+.scheduleb-part {
+    display: grid;
+
+    grid-template-columns:
+        92px minmax(0, 1fr);
+
+    border-bottom: 1px solid #111;
+}
+
+
+.scheduleb-part-side {
+    min-width: 0;
+
+    padding: 5px 7px 5px 0;
+
+    border-right: 1px solid #111;
+}
+
+
+.scheduleb-part-title {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 5px;
+}
+
+
+.scheduleb-part-title strong {
+    font-size: 17px;
+    line-height: 1;
+}
+
+
+.scheduleb-part-title span {
+    margin-top: 2px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    line-height: .98;
+}
+
+
+.scheduleb-side-note {
+    margin-top: 7px;
+
+    font-size: 9px;
+    line-height: 1.08;
+}
+
+
+.scheduleb-part-main {
+    min-width: 0;
+}
+
+
+
+/* =========================================================
+   PAYER LIST
+   ========================================================= */
+
+.scheduleb-list-heading {
+    display: grid;
+
+    grid-template-columns:
+        28px minmax(0, 1fr) 118px;
+
+    min-height: 59px;
+
+    border-bottom: 1px solid #111;
+}
+
+
+.scheduleb-list-heading-short {
+    min-height: 30px;
+}
+
+
+.scheduleb-line-number {
+    display: inline-flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 4px 3px 0;
+
+    font-weight: bold;
+}
+
+
+.scheduleb-list-instruction {
+    min-width: 0;
+
+    padding: 4px 6px;
+
+    font-size: 10px;
+    line-height: 1.15;
+}
+
+
+.scheduleb-amount-heading {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 4px;
+
+    border-left: 1px solid #111;
+
+    font-weight: bold;
+    font-size: 11px;
+}
+
+
+.scheduleb-payer-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 118px;
+
+    min-height: 17px;
+}
+
+
+.scheduleb-payer-name,
+.scheduleb-payer-amount {
+    min-width: 0;
+
+    border-bottom: 1px dotted #777;
+}
+
+
+.scheduleb-payer-amount {
+    border-left: 1px solid #111;
+    border-bottom: 1px solid #777;
+}
+
+
+.scheduleb-payer-row input {
+    display: block;
+
+    width: 100%;
+    height: 17px;
+
+    border: 0;
+
+    padding: 1px 4px;
+}
+
+
+.scheduleb-payer-amount input {
+    text-align: right;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+
+/* =========================================================
+   CALCULATION ROWS
+   ========================================================= */
+
+.scheduleb-calc-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 118px;
+
+    min-height: 24px;
+
+    border-top: 1px solid #111;
+}
+
+
+.scheduleb-calc-label {
+    display: grid;
+
+    grid-template-columns:
+        28px minmax(0, 1fr);
+
+    align-items: center;
+
+    min-width: 0;
+}
+
+
+.scheduleb-calc-label>span:last-child {
+    padding: 3px 6px;
+
+    line-height: 1.12;
+}
+
+
+.scheduleb-calc-box {
+    display: grid;
+
+    grid-template-columns:
+        24px minmax(0, 1fr);
+
+    min-width: 0;
+
+    border-left: 1px solid #111;
+}
+
+
+.scheduleb-calc-box-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid #111;
+
+    font-weight: bold;
+}
+
+
+.scheduleb-calc-box input {
+    width: 100%;
+    height: 100%;
+
+    min-height: 23px;
+
+    border: 0;
+
+    text-align: right;
+
+    padding: 2px 4px;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+.scheduleb-calc-row-strong {
+    border-bottom: 1px solid #111;
+}
+
+
+.scheduleb-threshold-note {
+    padding: 2px 6px 3px 28px;
+
+    font-size: 9px;
+    line-height: 1.1;
+}
+
+
+
+/* =========================================================
+   PART III
+   ========================================================= */
+
+.scheduleb-part-foreign .scheduleb-part-side {
+    padding-bottom: 6px;
+}
+
+
+.scheduleb-foreign-intro {
+    min-height: 38px;
+
+    padding: 4px 6px;
+
+    border-bottom: 1px solid #111;
+
+    font-size: 10px;
+    line-height: 1.15;
+}
+
+
+.scheduleb-yesno-head {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 30px 30px;
+
+    border-bottom: 1px solid #111;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+.scheduleb-yesno-head span:nth-child(2),
+.scheduleb-yesno-head span:nth-child(3) {
+    padding: 2px 0;
+
+    border-left: 1px solid #111;
+}
+
+
+.scheduleb-question-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 30px 30px;
+
+    min-height: 42px;
+
+    border-bottom: 1px solid #111;
+}
+
+
+.scheduleb-question-sub {
+    min-height: 48px;
+}
+
+
+.scheduleb-question-text {
+    min-width: 0;
+
+    padding: 5px 7px;
+
+    font-size: 10px;
+    line-height: 1.15;
+}
+
+
+.scheduleb-question-text strong {
+    display: inline-block;
+
+    min-width: 20px;
+}
+
+
+.scheduleb-choice {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-left: 1px solid #111;
+}
+
+
+.scheduleb-country-row {
+    padding: 5px 7px;
+
+    border-bottom: 1px solid #111;
+
+    font-size: 10px;
+    line-height: 1.15;
+}
+
+
+.scheduleb-country-row label {
+    display: block;
+}
+
+
+.scheduleb-country-row input {
+    display: block;
+
+    width: 100%;
+    height: 19px;
+
+    margin-top: 3px;
+
+    border: 0;
+    border-bottom: 1px dotted #777;
+}
+
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.scheduleb-page input:focus {
+    outline: 2px solid #4b8ed8;
+    outline-offset: -2px;
+}
+
+
+.scheduleb-page input[readonly] {
+    background: #f3f3f3;
+}
+
+
+.scheduleb-money {
+    font-variant-numeric: tabular-nums;
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.scheduleb-footer {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) auto auto;
+
+    gap: 10px;
+
+    padding-top: 4px;
+
+    font-size: 8px;
+}
+
+
+
+/* =========================================================
+   NARROW WINDOWS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .scheduleb-page {
+        padding: 16px 18px;
+    }
+
+
+    .scheduleb-header {
+        grid-template-columns:
+            110px minmax(0, 1fr) 105px;
+    }
+
+
+    .scheduleb-part {
+        grid-template-columns:
+            84px minmax(0, 1fr);
+    }
+
+
+    .scheduleb-payer-row,
+    .scheduleb-calc-row {
+        grid-template-columns:
+            minmax(0, 1fr) 105px;
+    }
+
+
+    .scheduleb-list-heading {
+        grid-template-columns:
+            25px minmax(0, 1fr) 105px;
+    }
+
+}
+
+
+
+/* =========================================================
+   VERY NARROW WINDOWS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .scheduleb-page {
+        padding: 10px;
+
+        font-size: 9px;
+    }
+
+
+    .scheduleb-header {
+        grid-template-columns:
+            82px minmax(0, 1fr) 78px;
+
+        min-height: 65px;
+    }
+
+
+    .scheduleb-formno>strong {
+        font-size: 11px;
+    }
+
+
+    .scheduleb-formno>span {
+        font-size: 9px;
+    }
+
+
+    .scheduleb-agency,
+    .scheduleb-omb {
+        font-size: 6px;
+    }
+
+
+    .scheduleb-title {
+        padding: 5px;
+    }
+
+
+    .scheduleb-title>strong {
+        font-size: 13px;
+    }
+
+
+    .scheduleb-instructions-head {
+        font-size: 7px;
+    }
+
+
+    .scheduleb-year {
+        font-size: 19px;
+    }
+
+
+    .scheduleb-taxpayer-row {
+        grid-template-columns:
+            minmax(0, 1fr) 110px;
+    }
+
+
+    .scheduleb-part {
+        grid-template-columns:
+            70px minmax(0, 1fr);
+    }
+
+
+    .scheduleb-part-title strong,
+    .scheduleb-part-title span {
+        font-size: 13px;
+    }
+
+
+    .scheduleb-side-note {
+        font-size: 7px;
+    }
+
+
+    .scheduleb-list-heading {
+        grid-template-columns:
+            22px minmax(0, 1fr) 82px;
+    }
+
+
+    .scheduleb-payer-row,
+    .scheduleb-calc-row {
+        grid-template-columns:
+            minmax(0, 1fr) 82px;
+    }
+
+
+    .scheduleb-list-instruction,
+    .scheduleb-question-text,
+    .scheduleb-country-row,
+    .scheduleb-foreign-intro {
+        font-size: 8px;
+    }
+
+
+    .scheduleb-yesno-head,
+    .scheduleb-question-row {
+        grid-template-columns:
+            minmax(0, 1fr) 24px 24px;
+    }
+
+
+    .scheduleb-footer {
+        gap: 5px;
+
+        font-size: 6px;
+    }
+
+}
+
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    .scheduleb-page {
+        width: 8.5in;
+        min-height: 11in;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding: .3in .4in;
+
+        overflow: visible;
+    }
+
+
+    .scheduleb-page input {
+        border-color: #111;
+    }
+
+}

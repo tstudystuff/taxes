@@ -1,13 +1,14 @@
 /* main.css */
 /* forms */
+
 @import url('../forms-taxes-html/forms-css/forms-css.css');
 
-
-@import url('../forms-taxes-html/form-8949/styles-8949.css');
-@import url('../forms-taxes-html/form-8949/styles-8949.css');
 @import url('../forms-taxes-html/form-1040/styles-1040.css');
 
-@import url('../forms-taxes-html//form-8949/styles-8949.css');
+@import url('../forms-taxes-html/form-8949/styles-8949.css');
+
+@import url('../forms-taxes-html/schedule-b/styles-schedule-b.css');
+
 
 
 @import url('styles.css');
