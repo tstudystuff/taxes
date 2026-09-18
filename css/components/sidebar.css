@@ -76,7 +76,7 @@
    SIDEBAR TITLE
    --------------------------------------------------------- */
 
-.side-bar > h2 {
+.side-bar>h2 {
 
     margin: 0 0 14px;
 
@@ -270,14 +270,14 @@
 }
 
 
-#sideBarList .sidebar-sublist > li {
+#sideBarList .sidebar-sublist>li {
 
     margin: 0;
     padding: 0;
 }
 
 
-#sideBarList .sidebar-sublist > li > a {
+#sideBarList .sidebar-sublist>li>a {
 
     display: block;
 
@@ -285,11 +285,15 @@
 }
 
 
-#sideBarList .sidebar-sublist > li::before {
+#sideBarList .sidebar-sublist>li::before {
 
     content: "";
 
     display: block;
 
     position: absolute;
+}
+
+#sideBarList a {
+    touch-action: manipulation;
 }
