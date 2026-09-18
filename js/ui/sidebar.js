@@ -367,43 +367,23 @@ function initSidebarClickHandler() {
     =========================================================
     */
 
-    // if (!document.eventsAdded) {
-
-    //     console.log(
-    //         pages[default_sidebar_index].file
-    //     );
-
-    //     loadPage(
-    //         pages[default_sidebar_index]
-    //     );
-    // }
-
-    // document.eventsAdded = true;
-
     loadPage(
         pages[default_sidebar_index]
     );
+
+
     /*
     =========================================================
-    CLICK HANDLER
+    SIDEBAR LINK CLICK
     =========================================================
     */
+
     sideBarList.addEventListener(
         "click",
-        (e) => {
-
-            console.log(
-                "SIDEBAR CLICK:",
-                e.target
-            );
+        e => {
 
             const link =
                 e.target.closest("a");
-
-            console.log(
-                "FOUND LINK:",
-                link
-            );
 
             if (!link) {
                 return;
@@ -414,29 +394,13 @@ function initSidebarClickHandler() {
             const pageId =
                 link.dataset.pageId;
 
-            console.log(
-                "PAGE ID:",
-                pageId
-            );
-
             const page =
                 findPageById(
                     pages,
                     pageId
                 );
 
-            console.log(
-                "FOUND PAGE:",
-                page
-            );
-
             if (!page) {
-
-                console.warn(
-                    "Could not find sidebar page:",
-                    pageId
-                );
-
                 return;
             }
 
@@ -445,50 +409,6 @@ function initSidebarClickHandler() {
             refreshSteps();
         }
     );
-    // sideBarList.addEventListener(
-    //     "click",
-    //     (e) => {
-
-    //         const link =
-    //             e.target.closest("a");
-
-    //         if (!link) {
-    //             return;
-    //         }
-
-    //         e.preventDefault();
-
-    //         const pageId =
-    //             link.dataset.pageId;
-
-    //         /*
-    //         IMPORTANT:
-    //         Search both top-level pages
-    //         and nested children.
-    //         */
-
-    //         const page =
-    //             findPageById(
-    //                 pages,
-    //                 pageId
-    //             );
-
-    //         if (!page) {
-
-    //             console.warn(
-    //                 "Could not find sidebar page:",
-    //                 pageId
-    //             );
-
-    //             return;
-    //         }
-
-    //         loadPage(page);
-
-    //         refreshSteps();
-
-    //     }
-    // );
 }
 
 
