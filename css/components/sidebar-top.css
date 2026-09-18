@@ -35,9 +35,7 @@
    HAMBURGER
    --------------------------------------------------------- */
 
-.main-content.sidebar-top
-.side-bar
-#sideBarBtn {
+.main-content.sidebar-top .side-bar #sideBarBtn {
 
     position: relative;
 
@@ -55,8 +53,7 @@
    TITLE
    --------------------------------------------------------- */
 
-.main-content.sidebar-top
-.side-bar > h2 {
+.main-content.sidebar-top .side-bar>h2 {
 
     margin: 0 14px;
 
@@ -73,8 +70,7 @@
    SIDEBAR LIST
    --------------------------------------------------------- */
 
-.main-content.sidebar-top
-.side-bar > #sideBarList {
+.main-content.sidebar-top .side-bar>#sideBarList {
 
     display: flex;
 
@@ -94,9 +90,7 @@
    SIDEBAR BUTTONS
    --------------------------------------------------------- */
 
-.main-content.sidebar-top
-.side-bar
-.side-bar-btns-container {
+.main-content.sidebar-top .side-bar .side-bar-btns-container {
 
     flex: 0 0 auto;
 
@@ -108,4 +102,34 @@
 
     border-top: none;
 
+}
+
+@media (max-width: 650px) {
+    .main-content.sidebar-top .side-bar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+
+        border-right: 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .main-content.sidebar-top #sideBarList {
+        max-height: 45vh;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .main-content.sidebar-top .side-bar {
+        /* width: 215px; */
+        /* max-width: 30vw; */
+        min-width: 100vw !important;
+    }
+
+    .main-content.sidebar-top #sideBarList a {
+        font-size: 80% !important;
+        padding: 0 !important;
+        margin-bottom: 10%;
+    }
 }

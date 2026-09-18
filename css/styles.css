@@ -314,17 +314,6 @@ body>.page-wrapper>nav h2 {
         margin-left: auto;
     }
 
-    .side-bar {
-        /* width: 215px; */
-        max-width: 30vw;
-    }
-
-    #sideBarList a {
-        font-size: 80% !important;
-        padding: 0 !important;
-        margin-bottom: 10%;
-    }
-
     .main-landing-page {
         padding: 20px;
     }
@@ -360,18 +349,7 @@ body>.page-wrapper>nav h2 {
         display: block;
     }
 
-    .side-bar {
-        width: 100%;
-        min-width: 0;
-        min-height: auto;
 
-        border-right: 0;
-        border-bottom: 1px solid #333;
-    }
-
-    #sideBarList {
-        max-height: 45vh;
-    }
 
     .main-landing-page {
         min-height: auto;

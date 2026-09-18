@@ -49,11 +49,11 @@
 
 #form1040>.tax-form-page,
 #form8949>.tax-form-page {
-    width:
+    /* width:
         calc(100% - (var(--tax-form-nav-gutter) * 2));
 
     max-width:
-        calc(100% - (var(--tax-form-nav-gutter) * 2));
+        calc(100% - (var(--tax-form-nav-gutter) * 2)); */
 
     margin-left: auto;
     margin-right: auto;
