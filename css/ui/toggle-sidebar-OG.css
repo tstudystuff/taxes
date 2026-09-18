@@ -1,0 +1,187 @@
+/* toggle-sidebar.css */
+/* =========================================================
+   SIDEBAR TOGGLE
+   COLLAPSED STATE ONLY
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   MAIN CONTENT
+   --------------------------------------------------------- */
+
+.main-content {
+
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    overflow: hidden;
+
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR TRANSITION
+   --------------------------------------------------------- */
+
+.main-content .side-bar {
+
+    transition:
+        flex-basis 0.3s ease,
+        width 0.3s ease,
+        min-width 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/* ---------------------------------------------------------
+   MAIN LANDING PAGE
+   --------------------------------------------------------- */
+
+.main-content .main-landing-page {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+/* =========================================================
+   COLLAPSED
+   ========================================================= */
+
+
+/*
+    The sidebar is still technically present,
+    but its flex width becomes ZERO.
+
+    This is the important part.
+
+    Because it no longer occupies 245px of flex space,
+    .main-landing-page automatically expands.
+*/
+
+.main-content.sidebar-collapsed .side-bar {
+
+    flex-basis: 0;
+
+    width: 0;
+
+    min-width: 0;
+
+    transform:
+        translateX(-245px);
+
+}
+
+
+/* ---------------------------------------------------------
+   KEEP HAMBURGER VISIBLE
+   --------------------------------------------------------- */
+
+
+/*
+    Normally the hamburger lives at:
+
+        sidebar left edge
+
+    When the sidebar moves -245px:
+
+        sidebar = -245px
+
+    So we move the hamburger +245px.
+
+    Result:
+
+        hamburger = 0px
+
+    exactly at the left edge of .main-content.
+*/
+
+.main-content.sidebar-collapsed
+.side-bar
+#sideBarBtn {
+
+    position: absolute;
+
+    top: 14px;
+
+    left: 245px;
+
+    margin: 0;
+
+    z-index: 1000;
+
+}
+
+
+/* ---------------------------------------------------------
+   HIDE SIDEBAR CONTENT
+   --------------------------------------------------------- */
+
+.main-content.sidebar-collapsed
+.side-bar > h2,
+
+.main-content.sidebar-collapsed
+.side-bar > #sideBarList,
+
+.main-content.sidebar-collapsed
+.side-bar > .side-bar-btns-container {
+
+    visibility: hidden;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .main-content {
+
+        display: flex;
+
+    }
+
+
+    .main-content .side-bar {
+
+        flex: 0 0 100%;
+
+        width: 100%;
+
+        min-width: 100%;
+
+    }
+
+
+    .main-content.sidebar-collapsed
+    .side-bar {
+
+        flex-basis: 0;
+
+        width: 0;
+
+        min-width: 0;
+
+        transform:
+            translateX(-100%);
+
+    }
+
+
+    .main-content.sidebar-collapsed
+    .side-bar
+    #sideBarBtn {
+
+        left: 100%;
+
+    }
+
+}

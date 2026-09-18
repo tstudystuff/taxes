@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taxes-project</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/app.js" defer></script>
+    <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self';
+            script-src 'self' 'unsafe-inline';
+            style-src 'self' https://cdn.jsdelivr.net;
+            font-src 'self' https://unpkg.com data:;
+            img-src 'self' data:;
+            frame-src https://www.youtube.com;
+            object-src 'none';
+            base-uri 'none';
+            form-action 'self';
+        ">
+</head>
+
+<body class="">
+    <div class="page-wrapper">
+        <header class="page-header">
+            <div class="back-links">
+                <a autofocus h rel="noopener noreferrer" data-nav-target="homepageLink"
+                    href="https://programshortcuts.github.io/tyler-tomani-2026/">
+                    homepage
+                </a>
+                <button id="resetPageBtn">
+                    reset page button
+                </button>
+            </div>
+            <div class="page-title-container">
+                <h1>
+                    promptys - prompt typer / saver
+                </h1>
+                <div class="code-container">
+                    <code class="copy-code">
+                        localStorage.removeItem("sidebar-pages");
+                    </code>
+                </div>
+            </div>
+            <div class="tutorial-dark-mode-container">
+                <p>
+                    {
+                    "key": "ctrl+alt+cmd+i",
+                    "command":
+                    "github.copilot.chat.completions.toggle"
+                    }
+                </p>
+            </div>
+        </header>
+        <nav>
+            <h2>
+                Tax-project
+            </h2>
+        </nav>
+        <main class="main-content">
+            <!-- SIDEBAR -->
+            <aside class="side-bar">
+                <svg tabindex="0" data-nav-target="side-bar-btn" id="sideBarBtn" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" role="button" aria-label="Toggle sidebar"
+                    aria-expanded="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <h2>Tax Forms</h2>
+                <ul id="sideBarList">
+                </ul>
+
+                <div class="side-bar-btns-container">
+                    <button tabindex="0" data-nav-target="plus-btn" id="createSidePage">
+                        +
+                    </button>
+                    <button data-nav-target="edit-side-bar-btn" id="editSideBarBtn">
+                        -
+                    </button>
+                </div>
+            </aside>
+            <!-- MAIN -->
+            <div data-autoload tabindex="0" class="main-landing-page">
+                <h3>
+                    Inject .side-bar a href html in here within
+                    .main-landing-page
+                </h3>
+            </div>
+        </main>
+        <span id="popElLetterNav" class="">letter navigation : true</span>
+    </div>
+</body>
+
+</html>

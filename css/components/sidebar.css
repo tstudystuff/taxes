@@ -1,0 +1,295 @@
+/* sidebar.css */
+/* =========================================================
+   SIDEBAR
+   NORMAL SIDEBAR COMPONENT
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   SIDEBAR
+   --------------------------------------------------------- */
+
+.side-bar {
+
+    flex: 0 0 245px;
+
+    width: 245px;
+    min-width: 245px;
+
+    min-height: calc(100vh - 110px);
+
+    background: #171717;
+
+    border-right: 1px solid #333;
+
+    padding: 14px 14px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR HAMBURGER
+   --------------------------------------------------------- */
+
+#sideBarBtn {
+
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    margin-bottom: 10px;
+
+    color: #aaa;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 1000;
+
+}
+
+
+#sideBarBtn:hover {
+
+    color: #fff;
+
+}
+
+
+#sideBarBtn:focus-visible {
+
+    outline: 1px solid #aaa;
+
+    outline-offset: 4px;
+
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR TITLE
+   --------------------------------------------------------- */
+
+.side-bar > h2 {
+
+    margin: 0 0 14px;
+
+    padding-bottom: 10px;
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    color: #ccc;
+
+    border-bottom: 1px solid #292929;
+
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR LIST
+   --------------------------------------------------------- */
+
+#sideBarList {
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    flex: 1;
+
+    overflow-y: auto;
+
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR LINKS
+   --------------------------------------------------------- */
+
+#sideBarList li {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+#sideBarList a {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 7px 9px;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+
+    border-left: 2px solid transparent;
+
+    transition:
+        color 0.12s ease,
+        background-color 0.12s ease,
+        border-color 0.12s ease;
+
+}
+
+
+#sideBarList a:hover {
+
+    color: #fff;
+
+    background: #222;
+
+    border-left-color: #777;
+
+}
+
+
+#sideBarList a:focus-visible {
+
+    outline: none;
+
+    color: #fff;
+
+    background: #222;
+
+    border-left-color: #aaa;
+
+}
+
+
+/* ---------------------------------------------------------
+   NESTED SIDEBAR LISTS
+   --------------------------------------------------------- */
+
+#sideBarList ul {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0 0 0 12px;
+
+}
+
+
+#sideBarList ul a {
+
+    font-size: 0.83rem;
+
+    color: #888;
+
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR BUTTONS
+   --------------------------------------------------------- */
+
+.side-bar-btns-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 14px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #292929;
+
+}
+
+
+.side-bar-btns-container button {
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    background: #202020;
+
+    border: 1px solid #3a3a3a;
+
+    color: #aaa;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    border-radius: 2px;
+
+}
+
+
+.side-bar-btns-container button:hover {
+
+    background: #292929;
+
+    color: #fff;
+
+}
+
+
+.side-bar-btns-container button:focus-visible {
+
+    outline: 1px solid #aaa;
+
+    outline-offset: 2px;
+
+}
+
+/* =========================================================
+   NESTED SIDEBAR PAGES
+   ========================================================= */
+
+#sideBarList .sidebar-sublist {
+
+    margin: 0 0 0 1rem;
+    padding: 0 0 0 0.75rem;
+
+    list-style: none;
+
+    border-left: 1px solid currentColor;
+}
+
+
+#sideBarList .sidebar-sublist > li {
+
+    margin: 0;
+    padding: 0;
+}
+
+
+#sideBarList .sidebar-sublist > li > a {
+
+    display: block;
+
+    padding-left: 0.75rem;
+}
+
+
+#sideBarList .sidebar-sublist > li::before {
+
+    content: "";
+
+    display: block;
+
+    position: absolute;
+}

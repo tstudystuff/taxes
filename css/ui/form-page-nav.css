@@ -1,0 +1,250 @@
+/* forms-css.css */
+
+
+/* =========================================================
+   SHARED TAX FORM LAYOUT
+   ========================================================= */
+
+.main-landing-page {
+    /*
+    Space on BOTH sides reserved for navigation arrows.
+    */
+    --tax-form-nav-gutter: 64px;
+
+    /*
+    Space above the form for the fixed page navigation.
+    */
+    --tax-form-nav-height: 46px;
+}
+
+
+/* =========================================================
+   FORM CONTAINERS
+   ========================================================= */
+
+#form1040,
+#form8949 {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    /*
+    Fixed navigation is removed from document flow,
+    so create room above the first page for it.
+    */
+    padding-top: var(--tax-form-nav-height);
+}
+
+
+/* =========================================================
+   PHYSICAL TAX PAGES
+
+   Central area =
+   full main-landing-page width
+   minus equal arrow gutters on both sides.
+
+   Therefore the form stays DEAD CENTER.
+   ========================================================= */
+
+#form1040>.tax-form-page,
+#form8949>.tax-form-page {
+    width:
+        calc(100% - (var(--tax-form-nav-gutter) * 2));
+
+    max-width:
+        calc(100% - (var(--tax-form-nav-gutter) * 2));
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /*
+    When JS jumps to this page,
+    leave room for the fixed arrow bar.
+    */
+    scroll-margin-top: 150px;
+}
+
+
+/* =========================================================
+   PAGE SEPARATION
+   ========================================================= */
+
+#form1040>.tax-form-page:not(:last-child),
+#form8949>.tax-form-page:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   FIXED FORM PAGE NAVIGATION
+   ========================================================= */
+
+.form-page-nav {
+    position: fixed;
+
+    /*
+    JS supplies:
+        top
+        left
+        width
+    */
+
+    z-index: 5000;
+
+    height: var(--tax-form-nav-height);
+
+    display: grid;
+
+    grid-template-columns:
+        var(--tax-form-nav-gutter) minmax(0, 1fr) var(--tax-form-nav-gutter);
+
+    align-items: center;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+   ========================================================= */
+
+.form-page-nav-btn {
+    width: 44px;
+    height: 36px;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #181818;
+
+    color: #fff;
+
+    border: 1px solid #777;
+
+    border-radius: 4px;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.45);
+}
+
+
+.form-page-nav-btn:hover {
+    background: #2b2b2b;
+}
+
+
+.form-page-nav-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   LEFT ARROW
+   ========================================================= */
+
+.form-page-nav-prev {
+    grid-column: 1;
+
+    justify-self: center;
+}
+
+
+/* =========================================================
+   RIGHT ARROW
+   ========================================================= */
+
+.form-page-nav-next {
+    grid-column: 3;
+
+    justify-self: center;
+}
+
+
+/* =========================================================
+   HIDDEN BUTTON
+
+   The grid column still exists, so showing/hiding an arrow
+   NEVER changes the position of the form or other arrow.
+   ========================================================= */
+
+.form-page-nav-btn[hidden] {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .main-landing-page {
+        --tax-form-nav-gutter: 48px;
+        --tax-form-nav-height: 42px;
+    }
+
+
+    #form1040>.tax-form-page:not(:last-child),
+    #form8949>.tax-form-page:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+
+    .form-page-nav-btn {
+        width: 36px;
+        height: 32px;
+
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    #form1040,
+    #form8949 {
+        padding-top: 0;
+    }
+
+
+    #form1040>.tax-form-page,
+    #form8949>.tax-form-page {
+        width: 100%;
+        max-width: 100%;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        scroll-margin-top: 0;
+    }
+
+
+    #form1040>.tax-form-page:not(:last-child),
+    #form8949>.tax-form-page:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+
+    .form-page-nav {
+        display: none;
+    }
+}

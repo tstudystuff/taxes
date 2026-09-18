@@ -1,0 +1,1009 @@
+/* =========================================================
+   FORM 1040 — 2025
+   Document stylesheet
+
+   IMPORTANT:
+   Everything is scoped to #form1040 so this stylesheet
+   does not style the surrounding application/sidebar.
+   ========================================================= */
+
+
+/* =========================================================
+   PAPER / DOCUMENT
+   ========================================================= */
+/* =========================================================
+   PHYSICAL 1040 PAGE
+   ========================================================= */
+
+#form1040>.tax-form-page {
+    display: block;
+
+    padding: 0.18in 0.22in;
+
+    background: #fff;
+    color: #000;
+
+    border: 1px solid #000;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.25);
+
+    page-break-after: always;
+    break-after: page;
+}
+
+#form1040>.tax-form-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+}
+
+/* Every element belonging to the tax document */
+
+#form1040 *,
+#form1040 *::before,
+#form1040 *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+#form1040 .page-wrapper {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0.18in 0.22in;
+
+    background: #fff;
+
+    color: #000;
+
+    page-break-after: always;
+    break-after: page;
+}
+
+#form1040 .page-wrapper:last-child {
+    page-break-after: auto;
+    break-after: auto;
+}
+
+
+/* =========================================================
+   GENERAL TYPOGRAPHY
+   ========================================================= */
+
+#form1040,
+#form1040 input,
+#form1040 select,
+#form1040 textarea,
+#form1040 button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form1040 .small {
+    font-size: 6.8pt;
+    line-height: 1.15;
+}
+
+#form1040 .bold {
+    font-weight: 700;
+}
+
+#form1040 .center {
+    text-align: center;
+}
+
+#form1040 .right {
+    text-align: right;
+}
+
+#form1040 .mt-2 {
+    margin-top: 4px;
+}
+
+#form1040 .mt-3 {
+    margin-top: 6px;
+}
+
+#form1040 .mt-4 {
+    margin-top: 8px;
+}
+
+#form1040 .pad-y-3 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+#form1040 .header {
+    display: grid;
+
+    grid-template-columns: 1.25fr 2fr 1.25fr;
+
+    min-height: 0;
+
+    border-bottom: 1.5px solid #000;
+
+    margin: 0;
+    padding: 5px 4px 6px;
+
+    align-items: start;
+}
+
+#form1040 .formno {
+    font-size: 12pt;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+#form1040 .formno-number {
+    font-size: 22pt;
+
+    font-weight: 700;
+}
+
+#form1040 .title {
+    text-align: center;
+
+    font-size: 12pt;
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    padding-top: 2px;
+}
+
+#form1040 .title .small {
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+#form1040 .agency {
+    text-align: right;
+
+    font-size: 6.5pt;
+
+    line-height: 1.15;
+}
+
+#form1040 .header .small {
+    font-size: 6.2pt;
+}
+
+
+/* =========================================================
+   META INFORMATION
+   ========================================================= */
+
+#form1040 .meta {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 4px 3px;
+
+    border-bottom: 1px solid #000;
+
+    font-size: 6.8pt;
+}
+
+#form1040 .meta>div:first-child {
+    flex: 1;
+}
+
+
+/* =========================================================
+   TWO / THREE / FOUR COLUMN GRIDS
+   ========================================================= */
+
+#form1040 .two {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+#form1040 .three {
+    display: grid;
+
+    grid-template-columns: 2fr 0.65fr 1.5fr;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+#form1040 .four {
+    display: grid;
+
+    grid-template-columns:
+        0.55fr 0.8fr 1.5fr 1.2fr;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+#form1040 .two>div,
+#form1040 .three>div,
+#form1040 .four>div {
+    min-width: 0;
+
+    border-right: 1px solid #000;
+
+    padding: 3px 4px;
+}
+
+#form1040 .two>div:last-child,
+#form1040 .three>div:last-child,
+#form1040 .four>div:last-child {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+   ========================================================= */
+
+#form1040 .section-title {
+    display: block;
+
+    width: 100%;
+
+    margin: 4px 0 0;
+
+    padding: 3px 5px;
+
+    background: #d9d9d9;
+
+    color: #000;
+
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+    font-size: 8pt;
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   FIELD LABELS
+   ========================================================= */
+
+#form1040 .fieldlabel {
+    display: block;
+
+    margin-bottom: 1px;
+
+    color: #000;
+
+    font-size: 6.2pt;
+    line-height: 1.05;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+#form1040 input[type="text"],
+#form1040 input[type="number"] {
+    display: inline-block;
+
+    height: 19px;
+
+    min-height: 19px;
+
+    margin: 0;
+    padding: 1px 3px;
+
+    background: #fff;
+
+    border: 1px solid #000;
+
+    border-radius: 0;
+
+    color: #000;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 8pt;
+
+    line-height: 1;
+
+    vertical-align: middle;
+
+    box-shadow: none;
+}
+
+#form1040 input.full {
+    display: block;
+
+    width: 100%;
+}
+
+#form1040 input.width-28 {
+    width: 28px;
+}
+
+#form1040 input.width-55 {
+    width: 55px;
+}
+
+#form1040 input.width-75 {
+    width: 75px;
+}
+
+#form1040 input.width-80 {
+    width: 80px;
+}
+
+#form1040 input.width-100 {
+    width: 100px;
+}
+
+#form1040 input.width-120 {
+    width: 120px;
+}
+
+#form1040 input.width-130 {
+    width: 130px;
+}
+
+
+/* =========================================================
+   CHECKBOXES / RADIO BUTTONS
+   ========================================================= */
+
+#form1040 input[type="checkbox"],
+#form1040 input[type="radio"] {
+    width: 11px;
+    height: 11px;
+
+    min-width: 11px;
+    min-height: 11px;
+
+    margin: 0 2px 0 1px;
+
+    padding: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: #fff;
+
+    border: 1px solid #000;
+
+    border-radius: 0;
+
+    vertical-align: -1px;
+}
+
+#form1040 input[type="radio"] {
+    border-radius: 50%;
+}
+
+#form1040 input[type="checkbox"]:checked {
+    position: relative;
+}
+
+#form1040 input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    position: absolute;
+
+    left: 1px;
+    top: -4px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #000;
+}
+
+#form1040 input[type="radio"]:checked {
+    box-shadow: inset 0 0 0 3px #fff;
+    background: #000;
+}
+
+
+/* =========================================================
+   STATUS GRID
+   ========================================================= */
+
+#form1040 .status-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 1px solid #000;
+}
+
+#form1040 .status-grid label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 3px;
+
+    min-width: 0;
+
+    padding: 3px 5px;
+
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+    font-size: 6.8pt;
+
+    line-height: 1.15;
+
+    color: #000;
+}
+
+#form1040 .status-grid label:nth-child(even) {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   DEPENDENTS TABLE
+   ========================================================= */
+
+#form1040 .dep-table {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    font-size: 5.8pt;
+
+    color: #000;
+}
+
+#form1040 .dep-table th,
+#form1040 .dep-table td {
+    border: 1px solid #000;
+
+    padding: 2px;
+
+    color: #000;
+
+    background: #fff;
+
+    vertical-align: middle;
+
+    line-height: 1.05;
+}
+
+#form1040 .dep-table th {
+    font-weight: 700;
+
+    text-align: center;
+
+    background: #e5e5e5;
+}
+
+#form1040 .dep-table th:nth-child(1) {
+    width: 6%;
+}
+
+#form1040 .dep-table th:nth-child(2),
+#form1040 .dep-table th:nth-child(3) {
+    width: 10%;
+}
+
+#form1040 .dep-table th:nth-child(4) {
+    width: 11%;
+}
+
+#form1040 .dep-table th:nth-child(5) {
+    width: 10%;
+}
+
+#form1040 .dep-table th:nth-child(6),
+#form1040 .dep-table th:nth-child(7),
+#form1040 .dep-table th:nth-child(8),
+#form1040 .dep-table th:nth-child(9),
+#form1040 .dep-table th:nth-child(10) {
+    width: 8.6%;
+}
+
+#form1040 .dep-table td input:not([type="checkbox"]) {
+    width: 100%;
+
+    height: 17px;
+
+    min-height: 17px;
+
+    font-size: 6.5pt;
+}
+
+#form1040 .dep-table td.center {
+    text-align: center;
+}
+
+
+/* =========================================================
+   INCOME LINES
+   ========================================================= */
+
+#form1040 .income-line {
+    display: grid;
+
+    grid-template-columns: 30px minmax(0, 1fr) 10px 115px;
+
+    align-items: center;
+
+    min-height: 22px;
+
+    border-bottom: 1px solid #000;
+
+    color: #000;
+}
+
+#form1040 .income-line .line-num {
+    padding-left: 3px;
+
+    font-weight: 700;
+
+    font-size: 7pt;
+}
+
+#form1040 .income-line .label {
+    padding: 2px 4px;
+
+    min-width: 0;
+
+    font-size: 7pt;
+
+    color: #000;
+}
+
+#form1040 .income-line .money {
+    width: 100%;
+
+    height: 19px;
+
+    min-height: 19px;
+
+    text-align: right;
+
+    font-size: 8pt;
+}
+
+#form1040 .income-line.calc {
+    border-top: 1.5px solid #000;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MONEY INPUTS
+   ========================================================= */
+
+#form1040 input.money {
+    text-align: right;
+
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* =========================================================
+   TAX / PAYMENT GRIDS
+   ========================================================= */
+
+#form1040 .taxgrid,
+#form1040 .paygrid {
+    display: grid;
+
+    grid-template-columns: 35px minmax(0, 1fr) 115px;
+
+    align-items: center;
+
+    min-height: 23px;
+
+    border-bottom: 1px solid #000;
+
+    color: #000;
+}
+
+#form1040 .taxgrid .line-num,
+#form1040 .paygrid .line-num {
+    padding-left: 3px;
+
+    font-size: 7pt;
+
+    font-weight: 700;
+}
+
+#form1040 .taxgrid .desc,
+#form1040 .paygrid .desc {
+    min-width: 0;
+
+    padding: 2px 4px;
+
+    font-size: 7pt;
+
+    color: #000;
+}
+
+#form1040 .taxgrid .money,
+#form1040 .paygrid .money {
+    width: 100%;
+
+    height: 19px;
+
+    min-height: 19px;
+
+    text-align: right;
+}
+
+#form1040 .taxgrid.calc,
+#form1040 .paygrid.calc {
+    border-top: 1.5px solid #000;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   REFUND BOX
+   ========================================================= */
+
+#form1040 .refundbox {
+    margin: 3px 0;
+
+    padding: 5px;
+
+    border: 1px solid #000;
+
+    color: #000;
+
+    background: #fff;
+}
+
+#form1040 .refundbox .three {
+    border-top: 1px solid #000;
+}
+
+
+/* =========================================================
+   WARNING / DECLARATION
+   ========================================================= */
+
+#form1040 .warn {
+    margin: 0;
+
+    padding: 5px;
+
+    border-bottom: 1px solid #000;
+
+    font-size: 6.8pt;
+
+    line-height: 1.15;
+
+    color: #000;
+}
+
+
+/* =========================================================
+   SIGNATURE AREA
+   ========================================================= */
+
+#form1040 .signature-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 0.65fr 1.35fr;
+
+    width: 100%;
+
+    border-bottom: 1px solid #000;
+}
+
+#form1040 .signature-grid>div {
+    min-width: 0;
+
+    padding: 3px 4px;
+
+    border-right: 1px solid #000;
+}
+
+#form1040 .signature-grid>div:last-child {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#form1040 .footer-note {
+    margin-top: 5px;
+
+    padding-top: 4px;
+
+    border-top: 1px solid #000;
+
+    font-size: 6pt;
+
+    line-height: 1.1;
+
+    color: #000;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   PAGE 2 TITLE
+   ========================================================= */
+
+#form1040 .page2-title {
+    padding: 2px 4px 5px;
+
+    border-bottom: 1px solid #000;
+
+    font-size: 7pt;
+
+    font-weight: 700;
+
+    text-align: right;
+
+    color: #000;
+}
+
+
+/* =========================================================
+   HOVER / FOCUS
+   ========================================================= */
+
+/*
+   Printed forms don't have web-style hover effects.
+   Keep the document visually static.
+*/
+
+#form1040 input:hover,
+#form1040 select:hover,
+#form1040 textarea:hover {
+    background: #fff;
+}
+
+#form1040 input:focus,
+#form1040 select:focus,
+#form1040 textarea:focus {
+    outline: 1px solid #000;
+    outline-offset: -1px;
+}
+
+/* =========================================================
+   IRS 1040 BLUE / CYAN BACKGROUND
+   Approximate color sampled from original 2025 Form 1040.
+   ========================================================= */
+
+#form1040 {
+    --irs-blue: #dcfffb;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#form1040 .header {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   FILING STATUS
+   ========================================================= */
+
+#form1040 .status-grid {
+    background: var(--irs-blue);
+}
+
+#form1040 .status-grid label {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   DEPENDENTS
+   ========================================================= */
+
+#form1040 .dep-table th {
+    background: var(--irs-blue);
+}
+
+#form1040 .dep-table td {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   INCOME
+   ========================================================= */
+
+#form1040 .income-line {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   TAX / PAYMENTS
+   ========================================================= */
+
+#form1040 .taxgrid,
+#form1040 .paygrid {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   REFUND
+   ========================================================= */
+
+#form1040 .refundbox {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   PAGE 2 HEADER
+   ========================================================= */
+
+#form1040 .page2-title {
+    background: var(--irs-blue);
+}
+
+
+/* =========================================================
+   KEEP ENTRY FIELDS WHITE
+
+   The IRS form uses the blue as the document background,
+   while fields where values are entered remain white.
+   ========================================================= */
+
+#form1040 input[type="text"],
+#form1040 input[type="number"],
+#form1040 input[type="checkbox"],
+#form1040 input[type="radio"],
+#form1040 select,
+#form1040 textarea {
+    background: #fff;
+}
+
+/* =========================================================
+   RESPONSIVE SCREEN VIEW
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    #form1040 {
+        width: 100%;
+        max-width: 100%;
+
+
+        border: 1px solid #000;
+
+        box-shadow: none;
+    }
+
+    #form1040 .page-wrapper {
+        padding: 12px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    #form1040 {
+        font-size: 7pt;
+    }
+
+    #form1040 .page-wrapper {
+        padding: 7px;
+    }
+
+    #form1040 .header {
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+
+    #form1040 .formno {
+        font-size: 9pt;
+    }
+
+    #form1040 .formno-number {
+        font-size: 16pt;
+    }
+
+    #form1040 .title {
+        font-size: 9pt;
+    }
+
+    #form1040 .agency {
+        font-size: 5.5pt;
+    }
+
+    #form1040 .dep-table {
+        font-size: 4.5pt;
+    }
+
+    #form1040 .income-line {
+        grid-template-columns: 24px minmax(0, 1fr) 5px 90px;
+    }
+
+    #form1040 .taxgrid,
+    #form1040 .paygrid {
+        grid-template-columns: 28px minmax(0, 1fr) 90px;
+    }
+
+    #form1040 .status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #form1040 .status-grid label {
+        border-right: 0;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    #form1040 {
+        width: 8.5in;
+        max-width: none;
+
+        margin: 0;
+
+        border: 0;
+
+        box-shadow: none;
+    }
+
+    #form1040 .page-wrapper {
+        width: 8.5in;
+
+        min-height: 11in;
+
+        padding: 0.18in 0.22in;
+
+        page-break-after: always;
+        break-after: page;
+    }
+
+    #form1040 .page-wrapper:last-child {
+        page-break-after: auto;
+        break-after: auto;
+    }
+}

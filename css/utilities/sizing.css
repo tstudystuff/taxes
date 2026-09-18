@@ -1,0 +1,22 @@
+/* sizing.css */
+.page-header{
+    height: 10vh;
+    width: 100%;
+}
+.main-content {
+    width: 100%;
+}
+.side-bar {
+    height: 100vh;
+}
+.step,
+.prompt{
+    width: 92%;
+}   
+.step-img > img,
+.step-vid > video,
+.prompt-img > img,
+.prompt-vid > video{
+    max-height: 600px;
+    max-width:  600px;
+}

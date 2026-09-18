@@ -1,0 +1,11 @@
+/* position.css */
+#sideBarList li {
+    position: relative;
+}
+
+#sideBarList button {
+    position: absolute;
+    transform: scaleX(3);
+    right: 0;
+    top: 0;
+}

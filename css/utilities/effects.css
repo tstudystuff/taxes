@@ -1,0 +1,6 @@
+/* effects.css */
+.prompt:active,.prompt:focus{
+    background-color: lightgreen;
+    padding-left: 3%;
+    padding-top: 1%;
+}

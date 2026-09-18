@@ -1,0 +1,400 @@
+<!-- form_1040_2025_html.html -->
+<form id="form1040">
+    <!-- PAGE 1 -->
+    <div class="page-wrapper tax-form-page" id="page1">
+        <div class="header">
+            <div>
+                <div class="formno">Form <span class="formno-number">1040</span></div>
+                <div class="small">Department of the Treasury—Internal Revenue Service</div>
+            </div>
+            <div class="title">U.S. Individual Income Tax Return<br><span class="small">2025</span></div>
+            <div class="agency">OMB No. 1545-0074<br><br>IRS Use Only—Do not write or staple in this space.</div>
+        </div>
+
+        <div class="meta">
+            <div>For the year Jan. 1–Dec. 31, 2025, or other tax year beginning <input class="width-75" type="text">,
+                2025, ending <input class="width-55" type="text">, 20<input class="width-28" type="text"></div>
+            <div class="right">See separate instructions.</div>
+        </div>
+        <div class="two mt-3">
+            <div>Filed pursuant to section 301.9100-2 <input type="checkbox"> &nbsp;Combat zone <input type="checkbox">
+            </div>
+            <div>Deceased: MM/DD/YYYY <input class="width-80" type="text"> &nbsp; Spouse: MM/DD/YYYY <input
+                    class="width-80" type="text"></div>
+        </div>
+
+        <div class="section-title">Your information</div>
+        <div class="two">
+            <div>
+                <label class="fieldlabel">Your first name and middle initial</label><input class="full"
+                    name="firstName">
+            </div>
+            <div>
+                <label class="fieldlabel">Last name</label><input class="full" name="lastName">
+            </div>
+        </div>
+        <div class="two">
+            <div><label class="fieldlabel">Your social security number</label><input class="full" name="ssn"></div>
+            <div><label class="fieldlabel">If joint return, spouse’s first name and middle initial</label><input
+                    class="full" name="spouseFirst"></div>
+        </div>
+        <div class="two">
+            <div><label class="fieldlabel">Spouse’s last name</label><input class="full" name="spouseLast"></div>
+            <div><label class="fieldlabel">Spouse’s social security number</label><input class="full" name="spouseSsn">
+            </div>
+        </div>
+        <div class="three">
+            <div><label class="fieldlabel">Home address (number and street)</label><input class="full" name="address">
+            </div>
+            <div><label class="fieldlabel">Apt. no.</label><input class="full" name="apt"></div>
+            <div><label class="fieldlabel">City, town, or post office</label><input class="full" name="city"></div>
+        </div>
+        <div class="four">
+            <div><label class="fieldlabel">State</label><input class="full" name="state"></div>
+            <div><label class="fieldlabel">ZIP code</label><input class="full" name="zip"></div>
+            <div><label class="fieldlabel">Foreign country name</label><input class="full" name="foreignCountry"></div>
+            <div><label class="fieldlabel">Foreign postal code</label><input class="full" name="foreignPostal"></div>
+        </div>
+        <div class="small mt-3">
+            <input type="checkbox" name="usHome"> Check here if your main home, and your spouse’s if filing jointly, was
+            in the U.S. for more than half of 2025.
+        </div>
+
+        <div class="section-title">Presidential Election Campaign</div>
+        <div class="small">Check here if you, or your spouse if filing jointly, want $3 to go to this fund. Checking a
+            box below will not change your tax or refund.
+            You <input type="checkbox" name="campaignYou"> &nbsp; Spouse <input type="checkbox" name="campaignSpouse">
+        </div>
+
+        <div class="section-title">Filing Status — Check only one box.</div>
+        <div class="status-grid">
+            <label><input type="radio" name="filingStatus" value="single"> Single</label>
+            <label><input type="radio" name="filingStatus" value="mfj"> Married filing jointly (even if only one had
+                income)</label>
+            <label><input type="radio" name="filingStatus" value="mfs"> Married filing separately (MFS). Enter spouse’s
+                SSN above and full name here: <input class="full"></label>
+            <label><input type="radio" name="filingStatus" value="hoh"> Head of household (HOH)</label>
+            <label><input type="radio" name="filingStatus" value="qss"> Qualifying surviving spouse (QSS)</label>
+        </div>
+        <div class="two">
+            <div><span class="small">If HOH/QSS, qualifying child’s name if applicable:</span><input class="full"></div>
+            <div><span class="small">Nonresident/dual-status spouse treated as U.S. resident for entire
+                    year:</span><input type="checkbox"> Name <input class="width-100" type="text"></div>
+        </div>
+
+        <div class="section-title">Digital Assets</div>
+        <div class="small">During 2025, did you receive, sell, exchange, or otherwise dispose of a digital asset, or
+            have a financial interest in one? &nbsp;
+            Yes <input type="radio" name="digitalAsset" value="yes"> No <input type="radio" name="digitalAsset"
+                value="no">
+        </div>
+
+        <div class="section-title">Dependents</div>
+        <div class="small">If more than four dependents, see instructions and check here <input type="checkbox"
+                name="moreDependents"></div>
+        <table class="dep-table">
+            <thead>
+                <tr>
+                    <th>Dependent</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>SSN</th>
+                    <th>Relationship</th>
+                    <th>Lived with you > half of 2025</th>
+                    <th>Full-time student</th>
+                    <th>Permanently & totally disabled</th>
+                    <th>Child tax credit</th>
+                    <th>Credit for other dependents</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input name="dep1first"></td>
+                    <td><input name="dep1last"></td>
+                    <td><input name="dep1ssn"></td>
+                    <td><input name="dep1rel"></td>
+                    <td class="center"><input type="checkbox" name="dep1lived"></td>
+                    <td class="center"><input type="checkbox" name="dep1student"></td>
+                    <td class="center"><input type="checkbox" name="dep1disabled"></td>
+                    <td class="center"><input type="checkbox" name="dep1ctc"></td>
+                    <td class="center"><input type="checkbox" name="dep1odc"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input name="dep2first"></td>
+                    <td><input name="dep2last"></td>
+                    <td><input name="dep2ssn"></td>
+                    <td><input name="dep2rel"></td>
+                    <td class="center"><input type="checkbox" name="dep2lived"></td>
+                    <td class="center"><input type="checkbox" name="dep2student"></td>
+                    <td class="center"><input type="checkbox" name="dep2disabled"></td>
+                    <td class="center"><input type="checkbox" name="dep2ctc"></td>
+                    <td class="center"><input type="checkbox" name="dep2odc"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input name="dep3first"></td>
+                    <td><input name="dep3last"></td>
+                    <td><input name="dep3ssn"></td>
+                    <td><input name="dep3rel"></td>
+                    <td class="center"><input type="checkbox" name="dep3lived"></td>
+                    <td class="center"><input type="checkbox" name="dep3student"></td>
+                    <td class="center"><input type="checkbox" name="dep3disabled"></td>
+                    <td class="center"><input type="checkbox" name="dep3ctc"></td>
+                    <td class="center"><input type="checkbox" name="dep3odc"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input name="dep4first"></td>
+                    <td><input name="dep4last"></td>
+                    <td><input name="dep4ssn"></td>
+                    <td><input name="dep4rel"></td>
+                    <td class="center"><input type="checkbox" name="dep4lived"></td>
+                    <td class="center"><input type="checkbox" name="dep4student"></td>
+                    <td class="center"><input type="checkbox" name="dep4disabled"></td>
+                    <td class="center"><input type="checkbox" name="dep4ctc"></td>
+                    <td class="center"><input type="checkbox" name="dep4odc"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="small mt-3"><input type="checkbox" name="mfsHohApart"> Check if MFS or HOH and lived apart from
+            spouse for last 6 months of 2025, or legally separated, and did not live in same household at end of 2025.
+        </div>
+
+        <div class="section-title">Income</div>
+        <div class="small">Attach Form(s) W-2 here. Also attach Forms W-2G and 1099-R if tax was withheld. If you did
+            not get a Form W-2, see instructions.</div>
+
+        <div class="income-line"><span class="line-num">1a</span><span class="label">Total amount from Form(s) W-2, box
+                1</span><span></span><input class="money" name="1a" type="number" step="0.01"></div>
+        <div class="income-line"><span class="line-num">1b</span><span class="label">Household employee wages not
+                reported on Form(s) W-2</span><span></span><input class="money" name="1b" type="number" step="0.01">
+        </div>
+        <div class="income-line"><span class="line-num">1c</span><span class="label">Tip income not reported on line
+                1a</span><span></span><input class="money" name="1c" type="number" step="0.01"></div>
+        <div class="income-line"><span class="line-num">1d</span><span class="label">Medicaid waiver payments not
+                reported on Form(s) W-2</span><span></span><input class="money" name="1d" type="number" step="0.01">
+        </div>
+        <div class="income-line"><span class="line-num">1e</span><span class="label">Taxable dependent care benefits
+                from Form 2441, line 26</span><span></span><input class="money" name="1e" type="number" step="0.01">
+        </div>
+        <div class="income-line"><span class="line-num">1f</span><span class="label">Employer-provided adoption benefits
+                from Form 8839, line 31</span><span></span><input class="money" name="1f" type="number" step="0.01">
+        </div>
+        <div class="income-line"><span class="line-num">1g</span><span class="label">Wages from Form 8919, line
+                6</span><span></span><input class="money" name="1g" type="number" step="0.01"></div>
+        <div class="income-line"><span class="line-num">1h</span><span class="label">Other earned income — type: <input
+                    class="width-120" type="text"></span><span></span><input class="money" name="1h" type="number"
+                step="0.01"></div>
+        <div class="income-line"><span class="line-num">1i</span><span class="label">Nontaxable combat pay
+                election</span><span></span><input class="money" name="1i" type="number" step="0.01"></div>
+        <div class="income-line calc"><span class="line-num">1z</span><span class="label">Add lines 1a through
+                1h</span><span></span><input class="money" id="1z" name="1z" readonly></div>
+
+        <div class="two mt-2">
+            <div>
+                <div class="income-line"><span class="line-num">2a</span><span class="label">Tax-exempt
+                        interest</span><span></span><input class="money" name="2a" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">3a</span><span class="label">Qualified
+                        dividends</span><span></span><input class="money" name="3a" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">4a</span><span class="label">IRA
+                        distributions</span><span></span><input class="money" name="4a" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">5a</span><span class="label">Pensions and
+                        annuities</span><span></span><input class="money" name="5a" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">6a</span><span class="label">Social security
+                        benefits</span><span></span><input class="money" name="6a" type="number" step="0.01"></div>
+            </div>
+            <div>
+                <div class="income-line"><span class="line-num">2b</span><span class="label">Taxable
+                        interest</span><span></span><input class="money" name="2b" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">3b</span><span class="label">Ordinary
+                        dividends</span><span></span><input class="money" name="3b" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">4b</span><span class="label">Taxable
+                        amount</span><span></span><input class="money" name="4b" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">5b</span><span class="label">Taxable
+                        amount</span><span></span><input class="money" name="5b" type="number" step="0.01"></div>
+                <div class="income-line"><span class="line-num">6b</span><span class="label">Taxable
+                        amount</span><span></span><input class="money" name="6b" type="number" step="0.01"></div>
+            </div>
+        </div>
+        <div class="small">
+            4c <input type="checkbox"> Rollover &nbsp; <input type="checkbox"> QCD &nbsp; 5c <input type="checkbox">
+            Rollover &nbsp; <input type="checkbox"> PSO &nbsp;
+            6c <input type="checkbox"> Lump-sum election &nbsp; 6d <input type="checkbox"> MFS lived apart entire year
+        </div>
+        <div class="income-line"><span class="line-num">7a</span><span class="label">Capital gain or (loss). Attach
+                Schedule D if required</span><span></span><input class="money" name="7a" type="number" step="0.01">
+        </div>
+        <div class="small">7b <input type="checkbox"> Schedule D not required &nbsp; <input type="checkbox"> Includes
+            child’s capital gain or (loss)</div>
+        <div class="income-line"><span class="line-num">8</span><span class="label">Additional income from Schedule 1,
+                line 10</span><span></span><input class="money" name="8" type="number" step="0.01"></div>
+        <div class="income-line calc"><span class="line-num">9</span><span class="label">Add lines 1z, 2b, 3b, 4b, 5b,
+                6b, 7a, and 8 — total income</span><span></span><input class="money" name="9" readonly></div>
+        <div class="income-line"><span class="line-num">10</span><span class="label">Adjustments to income from Schedule
+                1, line 26</span><span></span><input class="money" name="10" type="number" step="0.01"></div>
+        <div class="income-line calc"><span class="line-num">11a</span><span class="label">Subtract line 10 from line 9
+                — adjusted gross income</span><span></span><input class="money" name="11a" readonly></div>
+
+        <div class="footer-note">For Disclosure, Privacy Act, and Paperwork Reduction Act Notice, see separate
+            instructions. Cat. No. 11320B &nbsp; Form 1040 (2025)</div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page-wrapper tax-form-page" id="page2">
+        <div class="page2-title">Form 1040 (2025) — Page 2</div>
+
+        <div class="section-title">Tax and Credits</div>
+        <div class="taxgrid"><span class="line-num">11b</span><span class="desc">Amount from line 11a (adjusted gross
+                income)</span><input class="money" name="11b" readonly></div>
+        <div class="small pad-y-3">
+            12a <input type="checkbox"> Someone can claim you as a dependent &nbsp; <input type="checkbox"> Your spouse
+            as a dependent<br>
+            12b <input type="checkbox"> Spouse itemizes on a separate return &nbsp;
+            12c <input type="checkbox"> You were a dual-status alien<br>
+            12d You: <input type="checkbox"> Born before Jan. 2, 1961 <input type="checkbox"> Blind &nbsp;&nbsp;
+            Spouse: <input type="checkbox"> Born before Jan. 2, 1961 <input type="checkbox"> Blind
+        </div>
+        <div class="taxgrid"><span class="line-num">12e</span><span class="desc">Standard deduction or itemized
+                deductions (from Schedule A)</span><input class="money" name="12e" type="number" step="0.01"></div>
+        <div class="small">Standard deduction for 2025: Single/MFS $15,750; MFJ/QSS $31,500; HOH $23,625. If a box on
+            12a–12d is checked, see instructions.</div>
+        <div class="taxgrid"><span class="line-num">13a</span><span class="desc">Qualified business income deduction
+                from Form 8995 or 8995-A</span><input class="money" name="13a" type="number" step="0.01"></div>
+        <div class="taxgrid"><span class="line-num">13b</span><span class="desc">Additional deductions from Schedule
+                1-A, line 38</span><input class="money" name="13b" type="number" step="0.01"></div>
+        <div class="taxgrid calc"><span class="line-num">14</span><span class="desc">Add lines 12e, 13a, and
+                13b</span><input class="money" name="14" readonly></div>
+        <div class="taxgrid calc"><span class="line-num">15</span><span class="desc">Subtract line 14 from line 11b —
+                taxable income</span><input class="money" name="15" readonly></div>
+        <div class="taxgrid"><span class="line-num">16</span><span class="desc">Tax. Check if any from Form(s): <input
+                    type="checkbox"> 8814 <input type="checkbox"> 4972</span><input class="money" name="16"
+                type="number" step="0.01"></div>
+        <div class="taxgrid"><span class="line-num">17</span><span class="desc">Amount from Schedule 2, line
+                3</span><input class="money" name="17" type="number" step="0.01"></div>
+        <div class="taxgrid calc"><span class="line-num">18</span><span class="desc">Add lines 16 and 17</span><input
+                class="money" name="18" readonly></div>
+        <div class="taxgrid"><span class="line-num">19</span><span class="desc">Child tax credit or credit for other
+                dependents from Schedule 8812</span><input class="money" name="19" type="number" step="0.01"></div>
+        <div class="taxgrid"><span class="line-num">20</span><span class="desc">Amount from Schedule 3, line
+                8</span><input class="money" name="20" type="number" step="0.01"></div>
+        <div class="taxgrid calc"><span class="line-num">21</span><span class="desc">Add lines 19 and 20</span><input
+                class="money" name="21" readonly></div>
+        <div class="taxgrid calc"><span class="line-num">22</span><span class="desc">Subtract line 21 from line 18. If
+                zero or less, enter -0-.</span><input class="money" name="22" readonly></div>
+        <div class="taxgrid"><span class="line-num">23</span><span class="desc">Other taxes, including self-employment
+                tax, from Schedule 2, line 21</span><input class="money" name="23" type="number" step="0.01"></div>
+        <div class="taxgrid calc"><span class="line-num">24</span><span class="desc">Add lines 22 and 23 — total
+                tax</span><input class="money" name="24" readonly></div>
+
+        <div class="section-title">Payments and Refundable Credits</div>
+        <div class="paygrid"><span class="line-num">25a</span><span class="desc">Federal income tax withheld from
+                Form(s) W-2</span><input class="money" name="25a" type="number" step="0.01"></div>
+        <div class="paygrid"><span class="line-num">25b</span><span class="desc">Federal income tax withheld from
+                Form(s) 1099</span><input class="money" name="25b" type="number" step="0.01"></div>
+        <div class="paygrid"><span class="line-num">25c</span><span class="desc">Federal income tax withheld from other
+                forms</span><input class="money" name="25c" type="number" step="0.01"></div>
+        <div class="paygrid calc"><span class="line-num">25d</span><span class="desc">Add lines 25a through
+                25c</span><input class="money" name="25d" readonly></div>
+        <div class="paygrid"><span class="line-num">26</span><span class="desc">2025 estimated tax payments and amount
+                applied from 2024 return</span><input class="money" name="26" type="number" step="0.01"></div>
+        <div class="small">If you made estimated tax payments with your former spouse in 2025, enter their SSN: <input
+                class="width-130" type="text"></div>
+        <div class="paygrid"><span class="line-num">27a</span><span class="desc">Earned income credit (EIC)</span><input
+                class="money" name="27a" type="number" step="0.01"></div>
+        <div class="small">27b <input type="checkbox"> Clergy filing Schedule SE &nbsp;&nbsp; 27c <input
+                type="checkbox"> If you do not want to claim the EIC, check here.</div>
+        <div class="paygrid"><span class="line-num">28</span><span class="desc">Additional child tax credit (ACTC) from
+                Schedule 8812</span><input class="money" name="28" type="number" step="0.01"></div>
+        <div class="small"><input type="checkbox"> If you do not want to claim the ACTC, check here.</div>
+        <div class="paygrid"><span class="line-num">29</span><span class="desc">American opportunity credit from Form
+                8863, line 8</span><input class="money" name="29" type="number" step="0.01"></div>
+        <div class="paygrid"><span class="line-num">30</span><span class="desc">Refundable adoption credit from Form
+                8839, line 13</span><input class="money" name="30" type="number" step="0.01"></div>
+        <div class="paygrid"><span class="line-num">31</span><span class="desc">Amount from Schedule 3, line
+                15</span><input class="money" name="31" type="number" step="0.01"></div>
+        <div class="paygrid calc"><span class="line-num">32</span><span class="desc">Add lines 27a, 28, 29, 30, and 31 —
+                total other payments/refundable credits</span><input class="money" name="32" readonly></div>
+        <div class="paygrid calc"><span class="line-num">33</span><span class="desc">Add lines 25d, 26, and 32 — total
+                payments</span><input class="money" name="33" readonly></div>
+
+        <div class="section-title">Refund</div>
+        <div class="paygrid calc"><span class="line-num">34</span><span class="desc">If line 33 is more than line 24,
+                subtract line 24 from line 33 — amount overpaid</span><input class="money" name="34" readonly></div>
+        <div class="paygrid"><span class="line-num">35a</span><span class="desc">Amount of line 34 you want refunded to
+                you. If Form 8888 is attached, check here <input type="checkbox"></span><input class="money" name="35a"
+                type="number" step="0.01"></div>
+        <div class="refundbox">
+            <div class="bold">Direct deposit? See instructions.</div>
+            <div class="three mt-4">
+                <div><span class="fieldlabel">Routing number</span><input class="full" name="routing"></div>
+                <div><span class="fieldlabel">Type</span> Checking <input type="radio" name="acctType" value="checking">
+                    Savings <input type="radio" name="acctType" value="savings"></div>
+                <div><span class="fieldlabel">Account number</span><input class="full" name="account"></div>
+            </div>
+        </div>
+        <div class="paygrid"><span class="line-num">36</span><span class="desc">Amount of line 34 you want applied to
+                your 2026 estimated tax</span><input class="money" name="36" type="number" step="0.01"></div>
+
+        <div class="section-title">Amount You Owe</div>
+        <div class="paygrid calc"><span class="line-num">37</span><span class="desc">Subtract line 33 from line 24 —
+                amount you owe</span><input class="money" name="37" readonly></div>
+        <div class="paygrid"><span class="line-num">38</span><span class="desc">Estimated tax penalty</span><input
+                class="money" name="38" type="number" step="0.01"></div>
+
+        <div class="section-title">Third Party Designee</div>
+        <div class="small">Do you want to allow another person to discuss this return with the IRS? &nbsp;
+            Yes <input type="radio" name="designee" value="yes"> Complete below. &nbsp; No <input type="radio"
+                name="designee" value="no">
+        </div>
+        <div class="three">
+            <div><span class="fieldlabel">Designee’s name</span><input class="full"></div>
+            <div><span class="fieldlabel">Phone no.</span><input class="full"></div>
+            <div><span class="fieldlabel">Personal identification number (PIN)</span><input class="full"></div>
+        </div>
+
+        <div class="section-title">Sign Here</div>
+        <div class="warn">Under penalties of perjury, I declare that I have examined this return and accompanying
+            schedules and statements and, to the best of my knowledge and belief, they are true, correct, and complete.
+        </div>
+        <div class="signature-grid mt-4">
+            <div><span class="fieldlabel">Your signature</span><input class="full"></div>
+            <div><span class="fieldlabel">Date</span><input class="full"></div>
+            <div><span class="fieldlabel">Your occupation</span><input class="full"></div>
+        </div>
+        <div class="signature-grid mt-4">
+            <div><span class="fieldlabel">Spouse’s signature. If a joint return, both must sign.</span><input
+                    class="full"></div>
+            <div><span class="fieldlabel">Date</span><input class="full"></div>
+            <div><span class="fieldlabel">Spouse’s occupation</span><input class="full"></div>
+        </div>
+        <div class="three mt-4">
+            <div><span class="fieldlabel">Your Identity Protection PIN</span><input class="full"></div>
+            <div><span class="fieldlabel">Spouse’s Identity Protection PIN</span><input class="full"></div>
+            <div><span class="fieldlabel">Phone no.</span><input class="full"></div>
+        </div>
+        <div><label class="fieldlabel">Email address</label><input class="full"></div>
+
+        <div class="section-title">Paid Preparer Use Only</div>
+        <div class="two">
+            <div><span class="fieldlabel">Preparer’s name</span><input class="full"></div>
+            <div><span class="fieldlabel">Preparer’s signature</span><input class="full"></div>
+        </div>
+        <div class="four">
+            <div><span class="fieldlabel">Date</span><input class="full"></div>
+            <div><span class="fieldlabel">PTIN</span><input class="full"></div>
+            <div><span class="fieldlabel">Firm’s EIN</span><input class="full"></div>
+            <div class="small"><input type="checkbox"> Self-employed</div>
+        </div>
+        <div class="three">
+            <div><span class="fieldlabel">Firm’s name</span><input class="full"></div>
+            <div><span class="fieldlabel">Phone no.</span><input class="full"></div>
+            <div><span class="fieldlabel">Firm’s address</span><input class="full"></div>
+        </div>
+
+        <div class="footer-note">Go to www.irs.gov/Form1040 for instructions and the latest information. Form 1040
+            (2025)</div>
+    </div>
+
+</form>

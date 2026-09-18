@@ -1,0 +1,18 @@
+.main-content {
+    position: relative;
+}
+video,
+img{
+    transition: all .3s;
+    
+    outline: none!important;
+    border: none !important;
+}
+.enlarge {
+    outline: none!important;
+    border: none !important;
+    position: absolute;
+    z-index: 2;
+    transform: scale(1.5);
+    left: 24%;
+}

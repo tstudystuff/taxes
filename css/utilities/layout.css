@@ -1,0 +1,24 @@
+/* layout.css */
+.page-wrapper {
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+}
+.main-content{
+    display: flex;
+
+}
+#sideBarList a,
+#sideBarList li {
+    display: block;
+}
+.main-landing-page{
+    flex-grow: 1;
+}
+
+.side-bar-btns-container {
+    display: flex;
+}
+.side-bar-btns-container button{
+    flex-basis: 50%;
+}

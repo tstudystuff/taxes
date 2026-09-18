@@ -1,0 +1,43 @@
+/* main.css */
+/* forms */
+@import url('../forms-taxes-html/forms-css/forms-css.css');
+
+
+@import url('../forms-taxes-html/form-8949/styles-8949.css');
+@import url('../forms-taxes-html/form-8949/styles-8949.css');
+@import url('../forms-taxes-html/form-1040/styles-1040.css');
+
+@import url('../forms-taxes-html//form-8949/styles-8949.css');
+
+
+@import url('styles.css');
+/* components */
+/* @import url('components/page-header.css'); */
+@import url('components/sidebar.css');
+@import url('components/sidebar-top.css');
+/* ui */
+@import url('ui/form-page-nav.css');
+@import url('nav/dark-mode.css');
+@import url('nav/letter-nav.css');
+@import url('nav/light-mode.css');
+@import url('ui/toggle-img-sizes.css');
+@import url('ui/toggle-sidebar.css');
+
+/* forms */
+
+
+/* utilities */
+@import url('responsive.css');
+
+/* @import url('utilities/borders.css'); */
+/* @import url('utilities/effects.css'); */
+/* @import url('utilities/layout.css'); */
+/* @import url('utilities/position.css'); */
+/* @import url('utilities/sizing.css'); */
+/* @import url('utilities/spacing.css'); */
+/* @import url('utilities/text.css'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

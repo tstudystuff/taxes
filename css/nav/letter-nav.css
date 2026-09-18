@@ -1,0 +1,142 @@
+/* letter-nav.css */
+/* =========================================================
+   LETTER NAVIGATION MODE
+   ========================================================= */
+
+.page-wrapper[data-nav-mode="letter"] {
+
+    background: lightblue !important;
+
+    color: #222;
+
+}
+
+
+/* =========================================================
+   EVERYTHING INSIDE PAGE WRAPPER
+   ========================================================= */
+
+.page-wrapper[data-nav-mode="letter"]
+.page-header {
+
+    background: lightblue;
+
+    color: #222;
+
+}
+
+
+.page-wrapper[data-nav-mode="letter"]
+nav {
+
+    background: lightblue;
+
+    color: #222;
+
+}
+
+
+.page-wrapper[data-nav-mode="letter"]
+.main-content {
+
+    background: lightblue;
+
+    color: #222;
+
+}
+
+
+.page-wrapper[data-nav-mode="letter"]
+.side-bar {
+
+    background: lightblue;
+
+    color: #222;
+
+}
+
+
+.page-wrapper[data-nav-mode="letter"]
+.main-landing-page {
+
+    background: lightblue;
+
+    color: #222;
+
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.page-wrapper[data-nav-mode="letter"]
+h1,
+
+.page-wrapper[data-nav-mode="letter"]
+h2,
+
+.page-wrapper[data-nav-mode="letter"]
+h3,
+
+.page-wrapper[data-nav-mode="letter"]
+p {
+
+    color: #222;
+
+}
+
+
+/* =========================================================
+   SIDEBAR LINKS
+   ========================================================= */
+
+.page-wrapper[data-nav-mode="letter"]
+#sideBarList a {
+
+    color: #222;
+
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.page-wrapper[data-nav-mode="letter"]
+[tabindex="0"]:focus {
+
+    outline: 2px solid #222;
+
+    outline-offset: 3px;
+
+}
+
+/* =========================================================
+   LETTER NAVIGATION STATUS POPUP
+   ========================================================= */
+
+#popElLetterNav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    opacity: 0;
+
+    padding: 8px 12px;
+
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+
+    border-radius: 4px;
+
+    pointer-events: none;
+
+    transition: opacity 0.25s ease;
+
+    z-index: 9999;
+}
+
+#popElLetterNav.show {
+    opacity: 0.65;
+}
