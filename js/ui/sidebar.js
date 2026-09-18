@@ -351,6 +351,143 @@ function removePageById(
 // CLICK SIDEBAR LINKS
 // =========================================================
 
+// function initSidebarClickHandler() {
+
+//     const sideBarList =
+//         document.querySelector("#sideBarList");
+
+//     if (!sideBarList) {
+//         return;
+//     }
+
+
+//     /*
+//     =========================================================
+//     INITIAL PAGE LOAD
+//     =========================================================
+//     */
+
+//     if (!document.eventsAdded) {
+
+//         console.log(
+//             pages[default_sidebar_index].file
+//         );
+
+//         loadPage(
+//             pages[default_sidebar_index]
+//         );
+//     }
+
+//     document.eventsAdded = true;
+
+
+//     /*
+//     =========================================================
+//     CLICK HANDLER
+//     =========================================================
+//     */
+//     sideBarList.addEventListener(
+//         "click",
+//         (e) => {
+
+//             console.log(
+//                 "SIDEBAR CLICK:",
+//                 e.target
+//             );
+
+//             const link =
+//                 e.target.closest("a");
+
+//             console.log(
+//                 "FOUND LINK:",
+//                 link
+//             );
+
+//             if (!link) {
+//                 return;
+//             }
+
+//             e.preventDefault();
+
+//             const pageId =
+//                 link.dataset.pageId;
+
+//             console.log(
+//                 "PAGE ID:",
+//                 pageId
+//             );
+
+//             const page =
+//                 findPageById(
+//                     pages,
+//                     pageId
+//                 );
+
+//             console.log(
+//                 "FOUND PAGE:",
+//                 page
+//             );
+
+//             if (!page) {
+
+//                 console.warn(
+//                     "Could not find sidebar page:",
+//                     pageId
+//                 );
+
+//                 return;
+//             }
+
+//             loadPage(page);
+
+//             refreshSteps();
+//         }
+//     );
+//     // sideBarList.addEventListener(
+//     //     "click",
+//     //     (e) => {
+
+//     //         const link =
+//     //             e.target.closest("a");
+
+//     //         if (!link) {
+//     //             return;
+//     //         }
+
+//     //         e.preventDefault();
+
+//     //         const pageId =
+//     //             link.dataset.pageId;
+
+//     //         /*
+//     //         IMPORTANT:
+//     //         Search both top-level pages
+//     //         and nested children.
+//     //         */
+
+//     //         const page =
+//     //             findPageById(
+//     //                 pages,
+//     //                 pageId
+//     //             );
+
+//     //         if (!page) {
+
+//     //             console.warn(
+//     //                 "Could not find sidebar page:",
+//     //                 pageId
+//     //             );
+
+//     //             return;
+//     //         }
+
+//     //         loadPage(page);
+
+//     //         refreshSteps();
+
+//     //     }
+//     // );
+// }
 function initSidebarClickHandler() {
 
     const sideBarList =
@@ -383,110 +520,117 @@ function initSidebarClickHandler() {
 
     /*
     =========================================================
-    CLICK HANDLER
+    ACTIVATE SIDEBAR PAGE
     =========================================================
     */
-    sideBarList.addEventListener(
-        "click",
-        (e) => {
 
-            console.log(
-                "SIDEBAR CLICK:",
-                e.target
+    function activateSidebarPage(e) {
+
+        const link =
+            e.target.closest?.(
+                "#sideBarList a"
             );
 
-            const link =
-                e.target.closest("a");
+        if (!link) {
+            return;
+        }
 
-            console.log(
-                "FOUND LINK:",
-                link
-            );
+        e.preventDefault();
 
-            if (!link) {
-                return;
-            }
+        const pageId =
+            link.dataset.pageId;
 
-            e.preventDefault();
-
-            const pageId =
-                link.dataset.pageId;
-
-            console.log(
-                "PAGE ID:",
+        const page =
+            findPageById(
+                pages,
                 pageId
             );
 
-            const page =
-                findPageById(
-                    pages,
-                    pageId
-                );
+        if (!page) {
 
-            console.log(
-                "FOUND PAGE:",
-                page
+            console.warn(
+                "Could not find sidebar page:",
+                pageId
             );
 
-            if (!page) {
+            return;
+        }
 
-                console.warn(
-                    "Could not find sidebar page:",
-                    pageId
-                );
+        loadPage(page);
 
+        refreshSteps();
+    }
+
+
+    /*
+    =========================================================
+    POINTER / TOUCH ACTIVATION
+    =========================================================
+
+    pointerup handles:
+        - touchscreen
+        - mouse
+        - stylus
+
+    This gives mobile an explicit activation path instead
+    of relying only on the browser-generated click event.
+    =========================================================
+    */
+
+    sideBarList.addEventListener(
+        "pointerup",
+        e => {
+
+            /*
+            Ignore mouse here.
+
+            Desktop mouse activation continues to use the
+            normal click handler below. This prevents a
+            desktop mouse from loading the page twice.
+            */
+
+            if (
+                e.pointerType === "mouse"
+            ) {
                 return;
             }
 
-            loadPage(page);
-
-            refreshSteps();
+            activateSidebarPage(e);
         }
     );
-    // sideBarList.addEventListener(
-    //     "click",
-    //     (e) => {
 
-    //         const link =
-    //             e.target.closest("a");
 
-    //         if (!link) {
-    //             return;
-    //         }
+    /*
+    =========================================================
+    NORMAL CLICK ACTIVATION
+    =========================================================
 
-    //         e.preventDefault();
+    Keep this for:
+        - desktop mouse
+        - keyboard-generated clicks
+        - browsers that use normal click for touch
+    =========================================================
+    */
 
-    //         const pageId =
-    //             link.dataset.pageId;
+    sideBarList.addEventListener(
+        "click",
+        e => {
 
-    //         /*
-    //         IMPORTANT:
-    //         Search both top-level pages
-    //         and nested children.
-    //         */
+            /*
+            A touch pointerup may be followed by a synthetic
+            click. Ignore that click so the page isn't loaded
+            twice.
+            */
 
-    //         const page =
-    //             findPageById(
-    //                 pages,
-    //                 pageId
-    //             );
+            if (
+                e.sourceCapabilities?.firesTouchEvents
+            ) {
+                return;
+            }
 
-    //         if (!page) {
-
-    //             console.warn(
-    //                 "Could not find sidebar page:",
-    //                 pageId
-    //             );
-
-    //             return;
-    //         }
-
-    //         loadPage(page);
-
-    //         refreshSteps();
-
-    //     }
-    // );
+            activateSidebarPage(e);
+        }
+    );
 }
 
 
