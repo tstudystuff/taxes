@@ -11,6 +11,11 @@ export const defaultPages = [
                 id: "form-8949-2025",
                 title: "Form 8949",
                 file: "../forms-taxes-html/form-8949/form_8949_2025.html"
+            },
+            {
+                id: "form-schedule-b-2025",
+                title: "Form 8949",
+                file: "../forms-taxes-html/form-8949/form_8949_2025.html"
             }
         ]
     },
