@@ -1,0 +1,550 @@
+<!-- form_schedule_1_25.html -->
+<link rel="stylesheet" href="./styles-schedule-1.css">
+
+<form id="schedule1">
+    <!-- PAGE 1 -->
+    <div class="page-wrapper schedule1-page tax-form-page" id="schedule1-page1">
+
+        <div class="schedule1-header">
+            <div class="schedule1-formno">
+                <strong>SCHEDULE 1</strong>
+                <span>(Form 1040)</span>
+                <div class="schedule1-agency">
+                    Department of the Treasury<br>
+                    Internal Revenue Service
+                </div>
+            </div>
+
+            <div class="schedule1-title">
+                <strong>Additional Income and Adjustments to Income</strong>
+                <div class="schedule1-instructions-head">
+                    Attach to Form 1040, 1040-SR, or 1040-NR.<br>
+                    Go to <strong>www.irs.gov/Form1040</strong> for instructions and the latest information.
+                </div>
+            </div>
+
+            <div class="schedule1-omb">
+                <div>OMB No. 1545-0074</div>
+                <div class="schedule1-year">2025</div>
+                <div>Attachment<br>Sequence No. <strong>01</strong></div>
+            </div>
+        </div>
+
+        <div class="schedule1-taxpayer-row">
+            <div>
+                <label for="schedule1Name">Name(s) shown on Form 1040, 1040-SR, or 1040-NR</label>
+                <input id="schedule1Name" type="text" name="schedule1Name">
+            </div>
+            <div>
+                <label for="schedule1Ssn">Your social security number</label>
+                <input id="schedule1Ssn" type="text" name="schedule1Ssn" inputmode="numeric">
+            </div>
+        </div>
+
+        <div class="schedule1-1099k">
+            <label for="schedule1_1099k_error">
+                For 2025, enter the amount reported to you on Form(s) 1099-K that was included in error
+                or for personal items sold at a loss
+            </label>
+            <input id="schedule1_1099k_error" type="number" step="0.01" name="form1099KErrorAmount"
+                aria-label="1099-K amount included in error or personal items sold at a loss">
+        </div>
+
+        <div class="schedule1-note">
+            <strong>Note:</strong> The remaining amounts reported to you on Form(s) 1099-K should be reported
+            elsewhere on your return depending on the nature of the transaction. See www.irs.gov/1099k.
+        </div>
+
+        <div class="schedule1-part-title">
+            <strong>Part I</strong>
+            <span>Additional Income</span>
+        </div>
+
+        <div class="schedule1-lines">
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">1</div>
+                <label for="s1-line1">Taxable refunds, credits, or offsets of state and local income taxes</label>
+                <div class="schedule1-value"><span>1</span><input id="s1-line1" type="number" step="0.01" name="line1">
+                </div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">2a</div>
+                <label for="s1-line2a">Alimony received</label>
+                <div class="schedule1-value"><span>2a</span><input id="s1-line2a" type="number" step="0.01"
+                        name="line2a"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-text-line">
+                <div class="schedule1-num">b</div>
+                <label for="s1-line2b">Date of original divorce or separation agreement (see instructions):</label>
+                <div class="schedule1-inline-field"><input id="s1-line2b" type="text" name="line2bDate"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">3</div>
+                <label for="s1-line3">Business income or (loss). Attach Schedule C</label>
+                <div class="schedule1-value"><span>3</span><input id="s1-line3" type="number" step="0.01" name="line3">
+                </div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">4</div>
+                <div class="schedule1-label">
+                    Other gains or (losses). Check if any from Form(s):
+                    <label class="schedule1-check"><input type="checkbox" name="line4Form4797"> 4797</label>
+                    <label class="schedule1-check"><input type="checkbox" name="line4Form4684"> 4684</label>
+                </div>
+                <div class="schedule1-value"><span>4</span><input id="s1-line4" type="number" step="0.01" name="line4"
+                        aria-label="Line 4 other gains or losses"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">5</div>
+                <label for="s1-line5">Rental real estate, royalties, partnerships, S corporations, trusts, etc. Attach
+                    Schedule E</label>
+                <div class="schedule1-value"><span>5</span><input id="s1-line5" type="number" step="0.01" name="line5">
+                </div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">6</div>
+                <label for="s1-line6">Farm income or (loss). Attach Schedule F</label>
+                <div class="schedule1-value"><span>6</span><input id="s1-line6" type="number" step="0.01" name="line6">
+                </div>
+            </div>
+
+            <div class="schedule1-line schedule1-line-tall">
+                <div class="schedule1-num">7</div>
+                <div class="schedule1-label">
+                    <label for="s1-line7">Unemployment compensation. If you repaid a 2025 overpayment (see
+                        instructions), check here and enter amount repaid:</label>
+                    <label class="schedule1-check"><input type="checkbox" name="line7Repaid"> repaid</label>
+                    <input class="schedule1-small-inline" type="number" step="0.01" name="line7RepaidAmount"
+                        aria-label="Line 7 amount repaid">
+                </div>
+                <div class="schedule1-value"><span>7</span><input id="s1-line7" type="number" step="0.01" name="line7">
+                </div>
+            </div>
+
+            <div class="schedule1-section-label">
+                <div class="schedule1-num">8</div>
+                <strong>Other income:</strong>
+            </div>
+
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">a</div>
+                <label for="s1-line8a">Net operating loss</label>
+                <div class="schedule1-value"><span>8a</span><input id="s1-line8a" type="number" step="0.01"
+                        name="line8a"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">b</div>
+                <label for="s1-line8b">Gambling</label>
+                <div class="schedule1-value"><span>8b</span><input id="s1-line8b" type="number" step="0.01"
+                        name="line8b"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">c</div>
+                <label for="s1-line8c">Cancellation of debt</label>
+                <div class="schedule1-value"><span>8c</span><input id="s1-line8c" type="number" step="0.01"
+                        name="line8c"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">d</div>
+                <label for="s1-line8d">Foreign earned income exclusion from Form 2555</label>
+                <div class="schedule1-value"><span>8d</span><input id="s1-line8d" type="number" step="0.01"
+                        name="line8d"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">e</div>
+                <label for="s1-line8e">Income from Form 8853</label>
+                <div class="schedule1-value"><span>8e</span><input id="s1-line8e" type="number" step="0.01"
+                        name="line8e"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">f</div>
+                <label for="s1-line8f">Income from Form 8889</label>
+                <div class="schedule1-value"><span>8f</span><input id="s1-line8f" type="number" step="0.01"
+                        name="line8f"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">g</div>
+                <label for="s1-line8g">Alaska Permanent Fund dividends</label>
+                <div class="schedule1-value"><span>8g</span><input id="s1-line8g" type="number" step="0.01"
+                        name="line8g"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">h</div>
+                <label for="s1-line8h">Jury duty pay</label>
+                <div class="schedule1-value"><span>8h</span><input id="s1-line8h" type="number" step="0.01"
+                        name="line8h"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">i</div>
+                <label for="s1-line8i">Prizes and awards</label>
+                <div class="schedule1-value"><span>8i</span><input id="s1-line8i" type="number" step="0.01"
+                        name="line8i"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">j</div>
+                <label for="s1-line8j">Activity not engaged in for profit income</label>
+                <div class="schedule1-value"><span>8j</span><input id="s1-line8j" type="number" step="0.01"
+                        name="line8j"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">k</div>
+                <label for="s1-line8k">Stock options</label>
+                <div class="schedule1-value"><span>8k</span><input id="s1-line8k" type="number" step="0.01"
+                        name="line8k"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">l</div>
+                <label for="s1-line8l">Income from the rental of personal property if you engaged in the rental for
+                    profit but were not in the business of renting such property</label>
+                <div class="schedule1-value"><span>8l</span><input id="s1-line8l" type="number" step="0.01"
+                        name="line8l"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">m</div>
+                <label for="s1-line8m">Olympic and Paralympic medals and USOC prize money (see instructions)</label>
+                <div class="schedule1-value"><span>8m</span><input id="s1-line8m" type="number" step="0.01"
+                        name="line8m"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">n</div>
+                <label for="s1-line8n">Section 951(a) inclusion (see instructions)</label>
+                <div class="schedule1-value"><span>8n</span><input id="s1-line8n" type="number" step="0.01"
+                        name="line8n"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">o</div>
+                <label for="s1-line8o">Section 951A(a) inclusion (see instructions)</label>
+                <div class="schedule1-value"><span>8o</span><input id="s1-line8o" type="number" step="0.01"
+                        name="line8o"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">p</div>
+                <label for="s1-line8p">Section 461(l) excess business loss adjustment</label>
+                <div class="schedule1-value"><span>8p</span><input id="s1-line8p" type="number" step="0.01"
+                        name="line8p"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">q</div>
+                <label for="s1-line8q">Taxable distributions from an ABLE account (see instructions)</label>
+                <div class="schedule1-value"><span>8q</span><input id="s1-line8q" type="number" step="0.01"
+                        name="line8q"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">r</div>
+                <label for="s1-line8r">Scholarship and fellowship grants not reported on Form W-2</label>
+                <div class="schedule1-value"><span>8r</span><input id="s1-line8r" type="number" step="0.01"
+                        name="line8r"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">s</div>
+                <label for="s1-line8s">Nontaxable amount of Medicaid waiver payments included on Form 1040, line 1a or
+                    1d</label>
+                <div class="schedule1-value"><span>8s</span><input id="s1-line8s" type="number" step="0.01"
+                        name="line8s"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">t</div>
+                <label for="s1-line8t">Pension or annuity from a nonqualified deferred compensation plan or a
+                    nongovernmental section 457 plan</label>
+                <div class="schedule1-value"><span>8t</span><input id="s1-line8t" type="number" step="0.01"
+                        name="line8t"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">u</div>
+                <label for="s1-line8u">Wages earned while incarcerated</label>
+                <div class="schedule1-value"><span>8u</span><input id="s1-line8u" type="number" step="0.01"
+                        name="line8u"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">v</div>
+                <label for="s1-line8v">Digital assets received as ordinary income not reported elsewhere. See
+                    instructions</label>
+                <div class="schedule1-value"><span>8v</span><input id="s1-line8v" type="number" step="0.01"
+                        name="line8v"></div>
+            </div>
+
+            <div class="schedule1-other-z">
+                <div class="schedule1-num">z</div>
+                <div class="schedule1-z-fields">
+                    <label for="s1-line8z-type">Other income. List type and amount:</label>
+                    <input id="s1-line8z-type" type="text" name="line8zType" aria-label="Line 8z other income type">
+                </div>
+                <div class="schedule1-value"><span>8z</span><input id="s1-line8z" type="number" step="0.01"
+                        name="line8z" aria-label="Line 8z other income amount"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-total-line">
+                <div class="schedule1-num">9</div>
+                <label for="s1-line9"><strong>Total other income.</strong> Add lines 8a through 8z</label>
+                <div class="schedule1-value"><span>9</span><input id="s1-line9" type="number" step="0.01" name="line9">
+                </div>
+            </div>
+
+            <div class="schedule1-line schedule1-total-line schedule1-line-tall">
+                <div class="schedule1-num">10</div>
+                <label for="s1-line10">Combine lines 1 through 7 and 9. This is your <strong>additional income.</strong>
+                    Enter here and on Form 1040, 1040-SR, or 1040-NR, line 8</label>
+                <div class="schedule1-value"><span>10</span><input id="s1-line10" type="number" step="0.01"
+                        name="line10"></div>
+            </div>
+        </div>
+
+        <div class="schedule1-footer">
+            <strong>For Paperwork Reduction Act Notice, see your tax return instructions.</strong>
+            <span>Cat. No. 71479F</span>
+            <span>Schedule 1 (Form 1040) 2025</span>
+            <span>Created 7/25/25</span>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page-wrapper schedule1-page tax-form-page" id="schedule1-page2">
+
+        <div class="schedule1-page2-head">
+            <span>Schedule 1 (Form 1040) 2025</span>
+            <strong>Page 2</strong>
+        </div>
+
+        <div class="schedule1-part-title">
+            <strong>Part II</strong>
+            <span>Adjustments to Income</span>
+        </div>
+
+        <div class="schedule1-lines">
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">11</div>
+                <label for="s1-line11">Educator expenses</label>
+                <div class="schedule1-value"><span>11</span><input id="s1-line11" type="number" step="0.01"
+                        name="line11"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-line-tall">
+                <div class="schedule1-num">12</div>
+                <label for="s1-line12">Certain business expenses of reservists, performing artists, and fee-basis
+                    government officials. Attach Form 2106</label>
+                <div class="schedule1-value"><span>12</span><input id="s1-line12" type="number" step="0.01"
+                        name="line12"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">13</div>
+                <label for="s1-line13">Health savings account deduction. Attach Form 8889</label>
+                <div class="schedule1-value"><span>13</span><input id="s1-line13" type="number" step="0.01"
+                        name="line13"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-line-tall">
+                <div class="schedule1-num">14</div>
+                <div class="schedule1-label">
+                    <label for="s1-line14">Moving expenses for members of the Armed Forces. Attach Form 3903. If
+                        claiming only storage fees (see instructions), check here</label>
+                    <label class="schedule1-check"><input type="checkbox" name="line14StorageOnly"> storage fees
+                        only</label>
+                </div>
+                <div class="schedule1-value"><span>14</span><input id="s1-line14" type="number" step="0.01"
+                        name="line14"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">15</div>
+                <label for="s1-line15">Deductible part of self-employment tax. Attach Schedule SE</label>
+                <div class="schedule1-value"><span>15</span><input id="s1-line15" type="number" step="0.01"
+                        name="line15"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">16</div>
+                <label for="s1-line16">Self-employed SEP, SIMPLE, and qualified plans</label>
+                <div class="schedule1-value"><span>16</span><input id="s1-line16" type="number" step="0.01"
+                        name="line16"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">17</div>
+                <label for="s1-line17">Self-employed health insurance deduction</label>
+                <div class="schedule1-value"><span>17</span><input id="s1-line17" type="number" step="0.01"
+                        name="line17"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">18</div>
+                <label for="s1-line18">Penalty on early withdrawal of savings</label>
+                <div class="schedule1-value"><span>18</span><input id="s1-line18" type="number" step="0.01"
+                        name="line18"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">19a</div>
+                <label for="s1-line19a">Alimony paid</label>
+                <div class="schedule1-value"><span>19a</span><input id="s1-line19a" type="number" step="0.01"
+                        name="line19a"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-text-line">
+                <div class="schedule1-num">b</div>
+                <label for="s1-line19b">Recipient’s SSN</label>
+                <div class="schedule1-inline-field"><input id="s1-line19b" type="text" name="line19bRecipientSsn"
+                        inputmode="numeric"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-text-line">
+                <div class="schedule1-num">c</div>
+                <label for="s1-line19c">Date of original divorce or separation agreement (see instructions):</label>
+                <div class="schedule1-inline-field"><input id="s1-line19c" type="text" name="line19cDate"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-line-tall">
+                <div class="schedule1-num">20</div>
+                <div class="schedule1-label">
+                    <label for="s1-line20">IRA deduction. If you are married filing separately and lived apart from your
+                        spouse for the entire year (see instructions), check here</label>
+                    <label class="schedule1-check"><input type="checkbox" name="line20LivedApart"> lived apart entire
+                        year</label>
+                </div>
+                <div class="schedule1-value"><span>20</span><input id="s1-line20" type="number" step="0.01"
+                        name="line20"></div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">21</div>
+                <label for="s1-line21">Student loan interest deduction</label>
+                <div class="schedule1-value"><span>21</span><input id="s1-line21" type="number" step="0.01"
+                        name="line21"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-reserved">
+                <div class="schedule1-num">22</div>
+                <span>Reserved for future use</span>
+                <div class="schedule1-value"><span>22</span>
+                    <div class="schedule1-blocked"></div>
+                </div>
+            </div>
+
+            <div class="schedule1-line">
+                <div class="schedule1-num">23</div>
+                <label for="s1-line23">Archer MSA deduction</label>
+                <div class="schedule1-value"><span>23</span><input id="s1-line23" type="number" step="0.01"
+                        name="line23"></div>
+            </div>
+
+            <div class="schedule1-section-label">
+                <div class="schedule1-num">24</div>
+                <strong>Other adjustments:</strong>
+            </div>
+
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">a</div>
+                <label for="s1-line24a">Jury duty pay (see instructions)</label>
+                <div class="schedule1-value"><span>24a</span><input id="s1-line24a" type="number" step="0.01"
+                        name="line24a"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">b</div>
+                <label for="s1-line24b">Deductible expenses related to income reported on line 8l from the rental of
+                    personal property engaged in for profit</label>
+                <div class="schedule1-value"><span>24b</span><input id="s1-line24b" type="number" step="0.01"
+                        name="line24b"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">c</div>
+                <label for="s1-line24c">Nontaxable amount of the value of Olympic and Paralympic medals and USOC prize
+                    money reported on line 8m</label>
+                <div class="schedule1-value"><span>24c</span><input id="s1-line24c" type="number" step="0.01"
+                        name="line24c"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">d</div>
+                <label for="s1-line24d">Reforestation amortization and expenses</label>
+                <div class="schedule1-value"><span>24d</span><input id="s1-line24d" type="number" step="0.01"
+                        name="line24d"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">e</div>
+                <label for="s1-line24e">Repayment of supplemental unemployment benefits under the Trade Act of
+                    1974</label>
+                <div class="schedule1-value"><span>24e</span><input id="s1-line24e" type="number" step="0.01"
+                        name="line24e"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">f</div>
+                <label for="s1-line24f">Contributions to section 501(c)(18)(D) pension plans</label>
+                <div class="schedule1-value"><span>24f</span><input id="s1-line24f" type="number" step="0.01"
+                        name="line24f"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">g</div>
+                <label for="s1-line24g">Contributions by certain chaplains to section 403(b) plans</label>
+                <div class="schedule1-value"><span>24g</span><input id="s1-line24g" type="number" step="0.01"
+                        name="line24g"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">h</div>
+                <label for="s1-line24h">Attorney fees and court costs for actions involving certain unlawful
+                    discrimination claims (see instructions)</label>
+                <div class="schedule1-value"><span>24h</span><input id="s1-line24h" type="number" step="0.01"
+                        name="line24h"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line schedule1-line-tall">
+                <div class="schedule1-num">i</div>
+                <label for="s1-line24i">Attorney fees and court costs you paid in connection with an award from the IRS
+                    for information you provided that helped the IRS detect tax law violations</label>
+                <div class="schedule1-value"><span>24i</span><input id="s1-line24i" type="number" step="0.01"
+                        name="line24i"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">j</div>
+                <label for="s1-line24j">Housing deduction from Form 2555</label>
+                <div class="schedule1-value"><span>24j</span><input id="s1-line24j" type="number" step="0.01"
+                        name="line24j"></div>
+            </div>
+            <div class="schedule1-line schedule1-other-line">
+                <div class="schedule1-num">k</div>
+                <label for="s1-line24k">Excess deductions of section 67(e) expenses from Schedule K-1 (Form
+                    1041)</label>
+                <div class="schedule1-value"><span>24k</span><input id="s1-line24k" type="number" step="0.01"
+                        name="line24k"></div>
+            </div>
+
+            <div class="schedule1-other-z">
+                <div class="schedule1-num">z</div>
+                <div class="schedule1-z-fields">
+                    <label for="s1-line24z-type">Other adjustments. List type and amount:</label>
+                    <input id="s1-line24z-type" type="text" name="line24zType"
+                        aria-label="Line 24z other adjustment type">
+                </div>
+                <div class="schedule1-value"><span>24z</span><input id="s1-line24z" type="number" step="0.01"
+                        name="line24z" aria-label="Line 24z other adjustment amount"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-total-line">
+                <div class="schedule1-num">25</div>
+                <label for="s1-line25"><strong>Total other adjustments.</strong> Add lines 24a through 24z</label>
+                <div class="schedule1-value"><span>25</span><input id="s1-line25" type="number" step="0.01"
+                        name="line25"></div>
+            </div>
+
+            <div class="schedule1-line schedule1-total-line schedule1-line-tall">
+                <div class="schedule1-num">26</div>
+                <label for="s1-line26">Add lines 11 through 23 and 25. These are your <strong>adjustments to
+                        income.</strong>
+                    Enter here and on Form 1040, 1040-SR, or 1040-NR, line 10</label>
+                <div class="schedule1-value"><span>26</span><input id="s1-line26" type="number" step="0.01"
+                        name="line26"></div>
+            </div>
+        </div>
+
+        <div class="schedule1-footer schedule1-footer-page2">
+            <span></span>
+            <span></span>
+            <strong>Schedule 1 (Form 1040) 2025</strong>
+        </div>
+    </div>
+</form>
